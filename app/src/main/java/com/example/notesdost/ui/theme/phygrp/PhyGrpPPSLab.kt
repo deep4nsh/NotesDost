@@ -2,10 +2,15 @@ package com.example.notesdost.ui.theme.phygrp
 
 import android.os.Bundle
 import android.content.Intent
+import android.view.MenuInflater
+import android.view.View
 import android.widget.ExpandableListView
 import android.widget.ImageView
+import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
+import com.example.notesdost.ui.theme.activities.About
+import com.example.notesdost.ui.theme.activities.Privacy
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -36,14 +41,42 @@ class PhyGrpPPSLab : AppCompatActivity() {
 
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
-            val intent = Intent(this@PhyGrpPPSLab, PhysicsGroupActivity::class.java)
-            startActivity(intent)
+            // Go back to the previous activity
+            onBackPressed()
         }
+
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
-            val intent = Intent(this@PhyGrpPPSLab, PhysicsGroupActivity::class.java)
-            startActivity(intent)
+            // Show popup menu when menu button is clicked
+            showPopupMenu(it)
         }
+    }
+
+    private fun showPopupMenu(view: View) {
+        // Create a PopupMenu
+        val popupMenu = PopupMenu(this, view)
+        val inflater: MenuInflater = popupMenu.menuInflater
+        inflater.inflate(R.menu.main_menu, popupMenu.menu) // Inflate menu items
+
+        // Handle menu item clicks
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.privacy -> {
+                    // Open Privacy Policy Activity
+                    val intent = Intent(this@PhyGrpPPSLab, Privacy::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.about -> {
+                    // Open About Activity
+                    val intent = Intent(this@PhyGrpPPSLab, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
     }
 
     private fun addData() {

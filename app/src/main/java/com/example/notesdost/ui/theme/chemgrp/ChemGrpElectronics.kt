@@ -2,10 +2,15 @@ package com.example.notesdost.ui.theme.chemgrp
 
 import android.os.Bundle
 import android.content.Intent
+import android.view.MenuInflater
+import android.view.View
 import android.widget.ExpandableListView
 import android.widget.ImageView
+import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
+import com.example.notesdost.ui.theme.activities.About
+import com.example.notesdost.ui.theme.activities.Privacy
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -16,7 +21,6 @@ class ChemGrpElectronics : AppCompatActivity() {
     private lateinit var customAdapter: CustomAdapter
     private lateinit var chapterList: MutableList<Chapter>
     private lateinit var topicsList: MutableList<Topics>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,42 +41,74 @@ class ChemGrpElectronics : AppCompatActivity() {
 
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
-            val intent = Intent(this@ChemGrpElectronics, ChemistryGroupActivity::class.java)
-            startActivity(intent)
+            // Go back to the previous activity
+            onBackPressed()
         }
+
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
-            val intent = Intent(this@ChemGrpElectronics, ChemistryGroupActivity::class.java)
-            startActivity(intent)
+            // Show popup menu when menu button is clicked
+            showPopupMenu(it)
         }
+    }
+
+    private fun showPopupMenu(view: View) {
+        // Create a PopupMenu
+        val popupMenu = PopupMenu(this, view)
+        val inflater: MenuInflater = popupMenu.menuInflater
+        inflater.inflate(R.menu.main_menu, popupMenu.menu) // Inflate menu items
+
+        // Handle menu item clicks
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.privacy -> {
+                    // Open Privacy Policy Activity
+                    val intent = Intent(this@ChemGrpElectronics, Privacy::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.about -> {
+                    // Open About Activity
+                    val intent = Intent(this@ChemGrpElectronics, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
     }
 
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
 
-        topicsList.add(Topics("Unit 1 PDF", "https://docs.google.com/document/d/184aj4dz2659Nx7IDyr5vNGazo3GqsXqD/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1mM-K5XCEoa9I2Z9gPjqsibwvy8Fm17bJ/view?usp=sharing"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://docs.google.com/document/d/112c0KqOGNNDvanvt5fTl4WKRlQyr2WBL/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1k644yKf7XwhO-A9gP6WiSdybsH2M6N6H/view?usp=sharing"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://docs.google.com/document/d/1S2cIkMpykWUgoXjCaI5EvNapXphxiQX0/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1jhWyC0IQNn0QXSjbyZAWmh8BGLjYZ7ju/view?usp=sharing"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://docs.google.com/document/d/1Hwv7-Y6mty9JZXrC-UKdnA8awriLdLIE/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1STI5GoIkCZZp63rig3AyqrCa96ui_HYZ/view?usp=sharing"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://docs.google.com/document/d/1uoq8gAnWd1dMM4DpgXNzTH0VUf6Pqt3s/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1IR6xC3XajrbB0s5eQr8esuVTS8qjzCdL/view?usp=sharing"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Electronics Quantum PDF", "https://drive.google.com/file/d/1aYq4rQss_7l1aKdu0cHsJs-YCBZTR-ZB/view?usp=drive_link"))
+        topicsList.add(Topics("Electronics Quantum PDF", "https://drive.google.com/file/d/1HyZnFfVCxPRFnD49SmmGO1rr-a-DdBvn/view?usp=sharing"))
         chapterList.add(Chapter("Electronics Quantum", topicsList))
+
+        topicsList = mutableListOf()
+        topicsList.add(Topics("Question Bank", "https://miet.ac.in/media_image/resourses/2024_01_16_12_07_44_5550.pdf"))
+        chapterList.add(Chapter("QB/QP", topicsList))
 
         sendData()
     }

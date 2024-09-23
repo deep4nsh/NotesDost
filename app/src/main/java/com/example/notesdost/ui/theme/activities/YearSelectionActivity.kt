@@ -3,8 +3,11 @@ package com.example.notesdost.ui.theme.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
+import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.notesdost.R
@@ -14,7 +17,6 @@ class YearSelectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_year_selection)
 
-        val backArrow: ImageView = findViewById(R.id.backArrow)
         val firstYearCard: CardView = findViewById(R.id.firstYear)
         val secondYearCard: CardView = findViewById(R.id.secondYear)
         val thirdYearCard: CardView = findViewById(R.id.thirdYear)
@@ -22,10 +24,6 @@ class YearSelectionActivity : AppCompatActivity() {
         val firstYearMCACard: CardView = findViewById(R.id.firstYearMCA)
         val secondYearMCACard: CardView = findViewById(R.id.secondYearMCA)
 
-        backArrow.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-            startActivity(intent)
-        }
 
         firstYearCard.setOnClickListener {
             val intent = Intent(this@YearSelectionActivity, FirstYearMainActivity::class.java)
@@ -51,6 +49,39 @@ class YearSelectionActivity : AppCompatActivity() {
             val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
             startActivity(intent)
         }
+
+        val menu: ImageView = findViewById(R.id.menuBar)
+        menu.setOnClickListener {
+            // Show popup menu when menu button is clicked
+            showPopupMenu(it)
+        }
+    }
+
+    private fun showPopupMenu(view: View) {
+        // Create a PopupMenu
+        val popupMenu = PopupMenu(this, view)
+        val inflater: MenuInflater = popupMenu.menuInflater
+        inflater.inflate(R.menu.main_menu, popupMenu.menu) // Inflate menu items
+
+        // Handle menu item clicks
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.privacy -> {
+                    // Open Privacy Policy Activity
+                    val intent = Intent(this@YearSelectionActivity, Privacy::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.about -> {
+                    // Open About Activity
+                    val intent = Intent(this@YearSelectionActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
     }
 
     // This creates the options menu

@@ -334,7 +334,7 @@
                 android:layout_column="1"
                 android:layout_columnWeight="1"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:elevation="12dp"
                 app:cardCornerRadius="15dp">
 
@@ -365,51 +365,14 @@
             </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/softSkillLabCard"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_row="5"
-                android:layout_rowWeight="1"
-                android:layout_column="0"
-                android:layout_columnWeight="1"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:elevation="12dp"
-                app:cardCornerRadius="15dp">
 
-                <LinearLayout
-                    android:layout_width="182dp"
-                    android:layout_height="match_parent"
-                    android:background="#CAC4C4"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="87dp"
-                        android:layout_height="78dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="16dp"
-                        android:padding="3dp"
-                        android:src="@drawable/communication" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="Soft Skills Lab"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/workshopLabCard"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_row="5"
                 android:layout_rowWeight="1"
-                android:layout_column="1"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
