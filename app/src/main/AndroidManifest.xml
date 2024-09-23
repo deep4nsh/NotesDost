@@ -23,43 +23,43 @@
             android:name=".ui.theme.activities.Privacy"
             android:exported="false" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpPPSLab"
+            android:name=".ui.theme.phygrp.PhyGrpPPSLab"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpGraphicsLab"
+            android:name=".ui.theme.phygrp.PhyGrpGraphicsLab"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpPhyLab"
+            android:name=".ui.theme.phygrp.PhyGrpPhyLab"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpElecLab"
+            android:name=".ui.theme.phygrp.PhyGrpElecLab"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpPPS"
+            android:name=".ui.theme.phygrp.PhyGrpPPS"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpEVS"
+            android:name=".ui.theme.phygrp.PhyGrpEVS"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpElectrical"
+            android:name=".ui.theme.phygrp.PhyGrpElectrical"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpPhysics"
+            android:name=".ui.theme.phygrp.PhyGrpPhysics"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpMaths2"
+            android:name=".ui.theme.phygrp.PhyGrpMaths2"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhyGrpMaths1"
+            android:name=".ui.theme.phygrp.PhyGrpMaths1"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
@@ -67,11 +67,11 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.ChemistryGroupActivity"
+            android:name=".ui.theme.chemgrp.ChemistryGroupActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.PhysicsGroupActivity"
+            android:name=".ui.theme.phygrp.PhysicsGroupActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity

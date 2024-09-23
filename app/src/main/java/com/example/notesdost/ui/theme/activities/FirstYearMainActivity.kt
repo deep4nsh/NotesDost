@@ -3,10 +3,11 @@ package com.example.notesdost.ui.theme.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.notesdost.R
+import com.example.notesdost.ui.theme.chemgrp.ChemistryGroupActivity
+import com.example.notesdost.ui.theme.phygrp.PhysicsGroupActivity
 
 class FirstYearMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

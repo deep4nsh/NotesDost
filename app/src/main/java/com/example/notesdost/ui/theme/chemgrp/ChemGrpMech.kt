@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.chemgrp
 
 import android.os.Bundle
 import android.content.Intent
@@ -10,7 +10,7 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class PhyGrpGraphicsLab : AppCompatActivity() {
+class ChemGrpMech : AppCompatActivity() {
 
     private lateinit var backArrow: ImageView
     private lateinit var expandableListView: ExpandableListView
@@ -28,13 +28,13 @@ class PhyGrpGraphicsLab : AppCompatActivity() {
 
         // Set up the back arrow click listener
         backArrow.setOnClickListener {
-            val intent = Intent(this@PhyGrpGraphicsLab, PhysicsGroupActivity::class.java)
+            val intent = Intent(this@ChemGrpMech, ChemistryGroupActivity::class.java)
             startActivity(intent)
         }
 
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
-            val intent = Intent(this@PhyGrpGraphicsLab, PhysicsGroupActivity::class.java)
+            val intent = Intent(this@ChemGrpMech, ChemistryGroupActivity::class.java)
             startActivity(intent)
         }
 
@@ -54,9 +54,31 @@ class PhyGrpGraphicsLab : AppCompatActivity() {
 
     private fun addData() {
         chapterList = mutableListOf()
+
+        // Add topics to the respective chapters
+        topicsList = mutableListOf<Topics>()
+        topicsList.add(Topics("Unit 1 PDF", "https://docs.google.com/document/d/184aj4dz2659Nx7IDyr5vNGazo3GqsXqD/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        chapterList.add(Chapter("Unit 1", topicsList))
+
+        topicsList = mutableListOf() // Reset topicsList for new chapter
+        topicsList.add(Topics("Unit 2 PDF", "https://docs.google.com/document/d/112c0KqOGNNDvanvt5fTl4WKRlQyr2WBL/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        chapterList.add(Chapter("Unit 2", topicsList))
+
         topicsList = mutableListOf()
-        topicsList.add(Topics("All Sheets PDF", "https://drive.google.com/file/d/1pyIKOHf01XrHfdBR0iMufxf3NbjC-rcx/view?usp=sharing"))
-        chapterList.add(Chapter("Sheet 1", topicsList))
+        topicsList.add(Topics("Unit 3 PDF", "https://docs.google.com/document/d/1S2cIkMpykWUgoXjCaI5EvNapXphxiQX0/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        chapterList.add(Chapter("Unit 3", topicsList))
+
+        topicsList = mutableListOf()
+        topicsList.add(Topics("Unit 4 PDF", "https://docs.google.com/document/d/1Hwv7-Y6mty9JZXrC-UKdnA8awriLdLIE/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        chapterList.add(Chapter("Unit 4", topicsList))
+
+        topicsList = mutableListOf()
+        topicsList.add(Topics("Unit 5 PDF", "https://docs.google.com/document/d/1uoq8gAnWd1dMM4DpgXNzTH0VUf6Pqt3s/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        chapterList.add(Chapter("Unit 5", topicsList))
+
+        topicsList = mutableListOf()
+        topicsList.add(Topics("Mechanical Quantum PDF", "https://drive.google.com/file/d/15m8SRGv3oYN2M4aWJb0q0AV3qay12Goe/view?usp=sharing"))
+        chapterList.add(Chapter("Mechanical Quantum", topicsList))
 
         sendData()
     }
@@ -65,5 +87,4 @@ class PhyGrpGraphicsLab : AppCompatActivity() {
         customAdapter = CustomAdapter(chapterList, this)
         expandableListView.setAdapter(customAdapter)
     }
-
 }

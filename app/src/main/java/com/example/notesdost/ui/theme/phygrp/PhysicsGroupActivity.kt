@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.phygrp
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.notesdost.R
+import com.example.notesdost.ui.theme.activities.FirstYearMainActivity
 
 class PhysicsGroupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

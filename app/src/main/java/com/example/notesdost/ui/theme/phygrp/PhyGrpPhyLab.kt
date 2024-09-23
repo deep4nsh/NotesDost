@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.phygrp
 
 import android.os.Bundle
 import android.content.Intent
@@ -10,7 +10,7 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class PhyGrpPPSLab : AppCompatActivity() {
+class PhyGrpPhyLab : AppCompatActivity() {
 
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
@@ -36,12 +36,12 @@ class PhyGrpPPSLab : AppCompatActivity() {
 
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
-            val intent = Intent(this@PhyGrpPPSLab, PhysicsGroupActivity::class.java)
+            val intent = Intent(this@PhyGrpPhyLab, PhysicsGroupActivity::class.java)
             startActivity(intent)
         }
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
-            val intent = Intent(this@PhyGrpPPSLab, PhysicsGroupActivity::class.java)
+            val intent = Intent(this@PhyGrpPhyLab, PhysicsGroupActivity::class.java)
             startActivity(intent)
         }
     }
@@ -51,8 +51,8 @@ class PhyGrpPPSLab : AppCompatActivity() {
         topicsList = mutableListOf()
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Lab Manual PDF", "https://drive.google.com/file/d/17rvoTDpIE4Ylv0bLi8aUZrMyE_yp1VlA/view?usp=drive_link"))
-        chapterList.add(Chapter("Lab Manual Physiscs", topicsList))
+        topicsList.add(Topics("Lab Manual PDF", "https://drive.google.com/file/d/1hHX1-hwtilgDhslGV7JP1DWVAeW0hoTt/view?usp=drive_link"))
+        chapterList.add(Chapter("Lab Manual Physics", topicsList))
 
         sendData()
     }

@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.phygrp
 
 import android.os.Bundle
 import android.content.Intent
@@ -10,8 +10,9 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class PhyGrpMaths2 : AppCompatActivity() {
+class PhyGrpPPS : AppCompatActivity() {
 
+    private lateinit var backArrow: ImageView
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
     private lateinit var chapterList: MutableList<Chapter>
@@ -21,7 +22,23 @@ class PhyGrpMaths2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phy_grp_maths1)
 
+        // Initialize views here, after setContentView
         expandableListView = findViewById(R.id.expandableListView)
+        backArrow = findViewById(R.id.backArrow)
+
+        // Set up the back arrow click listener
+        backArrow.setOnClickListener {
+            val intent = Intent(this@PhyGrpPPS, PhysicsGroupActivity::class.java)
+            startActivity(intent)
+        }
+
+        val menu: ImageView = findViewById(R.id.menuBar)
+        menu.setOnClickListener {
+            val intent = Intent(this@PhyGrpPPS, PhysicsGroupActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Add data to the expandable list
         addData()
 
         // Set the listener for expanding groups
@@ -33,46 +50,35 @@ class PhyGrpMaths2 : AppCompatActivity() {
                 }
             }
         }
-
-        val backArrow: ImageView = findViewById(R.id.backArrow)
-        backArrow.setOnClickListener {
-            val intent = Intent(this@PhyGrpMaths2, PhysicsGroupActivity::class.java)
-            startActivity(intent)
-        }
-        val menu: ImageView = findViewById(R.id.menuBar)
-        menu.setOnClickListener {
-            val intent = Intent(this@PhyGrpMaths2, PhysicsGroupActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun addData() {
         chapterList = mutableListOf()
-        topicsList = mutableListOf()
 
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1joIIJOqlsnarDiKZxTe7qhfRgnK90yk-/view?usp=sharing"))
+        // Add topics to the respective chapters
+        topicsList = mutableListOf<Topics>()
+        topicsList.add(Topics("Unit 1 PDF", "https://docs.google.com/document/d/184aj4dz2659Nx7IDyr5vNGazo3GqsXqD/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1jbxaRnX4B4srqDRt-wImgtTDlgEZqmBw/view?usp=sharing"))
+        topicsList.add(Topics("Unit 2 PDF", "https://docs.google.com/document/d/112c0KqOGNNDvanvt5fTl4WKRlQyr2WBL/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1ny06B75wyBtu9JwWXg1W_e9FMCQjXroP/view?usp=sharing"))
+        topicsList.add(Topics("Unit 3 PDF", "https://docs.google.com/document/d/1S2cIkMpykWUgoXjCaI5EvNapXphxiQX0/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1Y10kQqCS70ci5O88cilRuwKOzCfhsEcO/view"))
+        topicsList.add(Topics("Unit 4 PDF", "https://docs.google.com/document/d/1Hwv7-Y6mty9JZXrC-UKdnA8awriLdLIE/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/105gyBYWYRplikiwr-melyo2Tn-86zLd4/view?usp=sharing"))
+        topicsList.add(Topics("Unit 5 PDF", "https://docs.google.com/document/d/1uoq8gAnWd1dMM4DpgXNzTH0VUf6Pqt3s/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
-
         topicsList = mutableListOf()
-        topicsList.add(Topics("Mathematics-2 Quantum PDF", "https://drive.google.com/file/d/1dGavWjpLytT96Pr2NDZpufSlTvt1h7k0/view?usp=sharing"))
-        chapterList.add(Chapter("Mathematics-2 Quantum", topicsList))
+        topicsList.add(Topics("PPS Quantum PDF", "https://drive.google.com/file/d/15m8SRGv3oYN2M4aWJb0q0AV3qay12Goe/view?usp=sharing"))
+        chapterList.add(Chapter("PPS Quantum", topicsList))
 
         sendData()
     }

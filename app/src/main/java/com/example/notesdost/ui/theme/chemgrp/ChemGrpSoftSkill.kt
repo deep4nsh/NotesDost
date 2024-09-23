@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.chemgrp
 
 import android.os.Bundle
 import android.content.Intent
@@ -10,13 +10,12 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class PhyGrpElectrical : AppCompatActivity() {
+class ChemGrpSoftSkill : AppCompatActivity() {
 
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
     private lateinit var chapterList: MutableList<Chapter>
     private lateinit var topicsList: MutableList<Topics>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,12 +36,12 @@ class PhyGrpElectrical : AppCompatActivity() {
 
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
-            val intent = Intent(this@PhyGrpElectrical, PhysicsGroupActivity::class.java)
+            val intent = Intent(this@ChemGrpSoftSkill, ChemistryGroupActivity::class.java)
             startActivity(intent)
         }
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
-            val intent = Intent(this@PhyGrpElectrical, PhysicsGroupActivity::class.java)
+            val intent = Intent(this@ChemGrpSoftSkill, ChemistryGroupActivity::class.java)
             startActivity(intent)
         }
     }
@@ -51,28 +50,28 @@ class PhyGrpElectrical : AppCompatActivity() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
 
-        topicsList.add(Topics("Unit 1 PDF", "https://docs.google.com/document/d/184aj4dz2659Nx7IDyr5vNGazo3GqsXqD/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/13wBUwwQq7vkUQf0yywqspqpOTr4H2LPq/view?usp=sharing"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://docs.google.com/document/d/112c0KqOGNNDvanvt5fTl4WKRlQyr2WBL/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1JYFj5JcUrbcLN4mG9j4shYeswILF78Cf/view?usp=sharing"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://docs.google.com/document/d/1S2cIkMpykWUgoXjCaI5EvNapXphxiQX0/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1bVSfIbsEKZLgCiSdehL98V9VXYo53ZDP/view?usp=sharing"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://docs.google.com/document/d/1Hwv7-Y6mty9JZXrC-UKdnA8awriLdLIE/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1fcRUm7hXJHysnWpxh5NDNAjLLzANKNT2/view?usp=sharing"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://docs.google.com/document/d/1uoq8gAnWd1dMM4DpgXNzTH0VUf6Pqt3s/edit?usp=drive_link&ouid=115747007949407496310&rtpof=true&sd=true"))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1dxF_ksa75vZnGs2v-zIx8kX8yA6YniI0/view?usp=sharing"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Electrical Quantum PDF", "https://drive.google.com/file/d/1aYq4rQss_7l1aKdu0cHsJs-YCBZTR-ZB/view?usp=drive_link"))
-        chapterList.add(Chapter("Electrical Quantum", topicsList))
+        topicsList.add(Topics("Chemistry Quantum PDF", "https://drive.google.com/file/d/1yMMPgsd4ps2VB5okQOsH-PmTTuXymvCW/view?usp=sharing"))
+        chapterList.add(Chapter("Chemistry Quantum", topicsList))
 
         sendData()
     }

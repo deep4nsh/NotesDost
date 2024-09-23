@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7C8993"
-    tools:context=".ui.theme.activities.PhysicsGroupActivity">
+    tools:context=".ui.theme.phygrp.PhysicsGroupActivity">
 
     <View
         android:id="@+id/top_view"
