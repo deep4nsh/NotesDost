@@ -14,7 +14,7 @@ import com.example.notesdost.ui.theme.model.Chapter
 
 class CustomAdapter(
     private val chapterList: List<Chapter>,  // List of chapters
-    private val context: Context              // Context (usually the activity)
+    private val context: Context             // Context (usually the activity)
 ) : BaseExpandableListAdapter() {
 
     override fun getGroupCount(): Int {

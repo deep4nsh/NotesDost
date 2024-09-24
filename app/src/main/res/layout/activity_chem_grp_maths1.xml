@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.theme.chemgrp.ChemGrpMaths1">
+    tools:context=".ui.theme.activities.firstyear.chemgrp.ChemGrpMaths1">
     <include layout="@layout/action_bar_top"/>
 
     <ExpandableListView
