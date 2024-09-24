@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#7C8993"
     android:orientation="horizontal"
-    tools:context=".ui.theme.activities.YearSelectionActivity">
+    tools:context=".ui.theme.activities.others.YearSelectionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

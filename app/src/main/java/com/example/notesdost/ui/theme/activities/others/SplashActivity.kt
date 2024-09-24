@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.activities.others
 
 import android.content.Intent
 import android.net.Uri

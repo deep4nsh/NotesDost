@@ -1,12 +1,12 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.activities.others
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
 
-class FourthYearMainActivity : AppCompatActivity() {
+class ThirdYearMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fourth_year_main)
+        setContentView(R.layout.activity_third_year_main)
     }
 }

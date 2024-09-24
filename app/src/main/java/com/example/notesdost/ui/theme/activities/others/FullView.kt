@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities
+package com.example.notesdost.ui.theme.activities.others
 
 import android.os.Bundle
 import android.webkit.WebSettings

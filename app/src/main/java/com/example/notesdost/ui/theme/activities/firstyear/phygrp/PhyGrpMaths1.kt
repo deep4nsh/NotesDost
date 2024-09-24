@@ -9,8 +9,8 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
-import com.example.notesdost.ui.theme.activities.About
-import com.example.notesdost.ui.theme.activities.Privacy
+import com.example.notesdost.ui.theme.activities.others.About
+import com.example.notesdost.ui.theme.activities.others.Privacy
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics

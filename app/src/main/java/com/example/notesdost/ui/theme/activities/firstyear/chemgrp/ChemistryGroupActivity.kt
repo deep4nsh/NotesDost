@@ -9,8 +9,8 @@ import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.notesdost.R
-import com.example.notesdost.ui.theme.activities.About
-import com.example.notesdost.ui.theme.activities.Privacy
+import com.example.notesdost.ui.theme.activities.others.About
+import com.example.notesdost.ui.theme.activities.others.Privacy
 
 class ChemistryGroupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
