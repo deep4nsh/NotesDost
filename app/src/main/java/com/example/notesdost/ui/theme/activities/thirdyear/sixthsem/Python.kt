@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities.secondyear
+package com.example.notesdost.ui.theme.activities.thirdyear.sixthsem
 
 import android.content.Intent
 import android.os.Bundle

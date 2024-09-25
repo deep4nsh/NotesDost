@@ -15,18 +15,15 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class Python : AppCompatActivity() {
-
+class CSS : AppCompatActivity() {
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
     private lateinit var chapterList: MutableList<Chapter>
     private lateinit var topicsList: MutableList<Topics>
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second_year_automata)
+        setContentView(R.layout.activity_phy_grp_maths1)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()
@@ -52,7 +49,6 @@ class Python : AppCompatActivity() {
             showPopupMenu(it)
         }
     }
-
     private fun showPopupMenu(view: View) {
         // Create a PopupMenu
         val popupMenu = PopupMenu(this, view)
@@ -64,13 +60,13 @@ class Python : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.privacy -> {
                     // Open Privacy Policy Activity
-                    val intent = Intent(this@Python, Privacy::class.java)
+                    val intent = Intent(this@CSS, Privacy::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.about -> {
                     // Open About Activity
-                    val intent = Intent(this@Python, About::class.java)
+                    val intent = Intent(this@CSS, About::class.java)
                     startActivity(intent)
                     true
                 }
@@ -79,40 +75,31 @@ class Python : AppCompatActivity() {
         }
         popupMenu.show()
     }
-
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1G4osV4W_o4T_LtwaBbnyoFgyNGtxRRwi/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1KoHBeV57lUO3F5F1z7ZUadjke3CukW5i/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
-
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1tFsKtnK1R0na1cWRaX1FvCxQcEApyuHx/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1BeMgvcrC5Oc-pICnSjFGVZxZD3VGjhqQ/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
-
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1TBWgyZt8sZdqfTnBMEquXCfFaUwWkC2r/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1Xihg0ZwVDo8NMIUQGIeyM1Szm9ZBp9E6/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
-
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1zS8ie1SMjNPgXHq_ZEb7Wd9pxMGNJjFN/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1Oi7DwlZt7JLvzxt_1xGXNNK4SI9_6GA9/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
-
         topicsList = mutableListOf()
-        topicsList.add(Topics("NA", ""))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1dCY1U88v_5tXTmZudlVDx2dKokNVt4iv/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("All Unit PDF", "https://drive.google.com/file/d/1DNAOCGWmJxd3_YmZA4PztqUf86FI7Z0n/view?usp=sharing"))
-        chapterList.add(Chapter("All Units Merged", topicsList))
-
-        topicsList = mutableListOf()
-        topicsList.add(Topics("Python Quantum PDF", "https://drive.google.com/file/d/1GADNOfY2ODSZ2k4qRHxhuyTjvchLBpKI/view?usp=sharing"))
-        chapterList.add(Chapter("Python Quantum", topicsList))
+        topicsList.add(Topics("CSS Quantum PDF", "https://drive.google.com/file/d/1JPPc7KP1Yx8TvdseJGOkagxVjZ3b8BgV/view?usp=sharing"))
+        chapterList.add(Chapter("CSS Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

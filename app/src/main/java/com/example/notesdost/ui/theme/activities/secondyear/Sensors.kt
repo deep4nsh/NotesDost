@@ -83,32 +83,33 @@ class Sensors : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/18kSggkIa-KOmICU8k5SA3b9JV_Aqz_bb/view?usp=drive_link"))
+        topicsList.add(Topics("Part 1 PDF", "https://drive.google.com/file/d/1_a6syEiGMa8MnzgVZ5egL7ROya9jAbRL/view?usp=drive_link"))
+        topicsList.add(Topics("Part 2 PDF", "https://drive.google.com/file/d/11Jh_z7dnaGe7Hl8Y8xH-hcr_u7tZ_s_w/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1c9GlwVLvoi_FiDleY9N4u8bPkI12NWTr/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1gQ9QPMtwC7WPyJes_WF25bt0LhweJkup/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/13uva4txo3kuvFrk1q-lsNmrU77mVk9p_/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1znKiLgb41i9nGCvre02TgXTg9daHWJHC/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1yxzOVWAXfSNJemb9dVGIK6Fmkd6i4R0f/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1uzxdhyj3pfpPt7sfcJikHPgpADcLpz8a/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1SXbl8nI6b7YXB35wmR806Nwx9FgficWk/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1pkL65JHzye3IQq-p0xVf1gbsfPrkUE1S/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Data Science PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
-        chapterList.add(Chapter("Data Science", topicsList))
+        topicsList.add(Topics("Sensor Quantum PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
+        chapterList.add(Chapter("Sensor Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

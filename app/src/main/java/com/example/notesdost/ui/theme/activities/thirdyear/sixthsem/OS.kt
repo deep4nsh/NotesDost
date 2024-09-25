@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities.secondyear
+package com.example.notesdost.ui.theme.activities.thirdyear.sixthsem
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,7 +15,7 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class Python : AppCompatActivity() {
+class OS : AppCompatActivity() {
 
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
@@ -64,13 +64,13 @@ class Python : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.privacy -> {
                     // Open Privacy Policy Activity
-                    val intent = Intent(this@Python, Privacy::class.java)
+                    val intent = Intent(this@OS, Privacy::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.about -> {
                     // Open About Activity
-                    val intent = Intent(this@Python, About::class.java)
+                    val intent = Intent(this@OS, About::class.java)
                     startActivity(intent)
                     true
                 }
@@ -83,36 +83,32 @@ class Python : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1G4osV4W_o4T_LtwaBbnyoFgyNGtxRRwi/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1a0PLTWOGLMpdzBssB6Z7IQLvTqFunWrc/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1tFsKtnK1R0na1cWRaX1FvCxQcEApyuHx/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1ZDe3CEQe5Nq5_EV83H8VZed4vTwWI5I-/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1TBWgyZt8sZdqfTnBMEquXCfFaUwWkC2r/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/19wN5wr7lKZjp3gOyaYlmLATnB1q4Lpd5/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1zS8ie1SMjNPgXHq_ZEb7Wd9pxMGNJjFN/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1L_cpfP1tDwTv-LPIWNER6_63K7gq7l3L/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("NA", ""))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1e2Bl-jHSRmC7P4iqeWS5-khRXvfxbN3i/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("All Unit PDF", "https://drive.google.com/file/d/1DNAOCGWmJxd3_YmZA4PztqUf86FI7Z0n/view?usp=sharing"))
-        chapterList.add(Chapter("All Units Merged", topicsList))
-
-        topicsList = mutableListOf()
-        topicsList.add(Topics("Python Quantum PDF", "https://drive.google.com/file/d/1GADNOfY2ODSZ2k4qRHxhuyTjvchLBpKI/view?usp=sharing"))
-        chapterList.add(Chapter("Python Quantum", topicsList))
+        topicsList.add(Topics("OS Quantum PDF", "https://drive.google.com/file/d/1KNnmHaSIcBkDecr7Oyg-4LRm2stYpAKi/view?usp=sharing"))
+        chapterList.add(Chapter("OS Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

@@ -83,32 +83,32 @@ class Mathematics : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/18kSggkIa-KOmICU8k5SA3b9JV_Aqz_bb/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1A-cjn0bXlkTQIUheGvrXa2qFcExeOV7o/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1c9GlwVLvoi_FiDleY9N4u8bPkI12NWTr/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1F5rmR0GiPrEtCFY0tdoeeg55LeJmPMno/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/13uva4txo3kuvFrk1q-lsNmrU77mVk9p_/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/10SDKSOqY2_aYMrvMTpKOM9HwhJGrXIUx/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1yxzOVWAXfSNJemb9dVGIK6Fmkd6i4R0f/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1aqUBUnjXNcPWI841bbQu_ZfUAZaIynDk/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1SXbl8nI6b7YXB35wmR806Nwx9FgficWk/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1gx3ueKbVFNwAJ4-038uf2JAAEydbebGa/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Data Science PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
-        chapterList.add(Chapter("Data Science", topicsList))
+        topicsList.add(Topics("Maths-4 Quantum PDF", "https://drive.google.com/file/d/1yHr0qQkxnPJNGMqaYLY618k5YQmeV-AY/view?usp=sharing"))
+        chapterList.add(Chapter("Maths-4 Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

@@ -104,8 +104,8 @@ class Java : AppCompatActivity() {
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Physics Quantum PDF", "https://drive.google.com/file/d/1yMMPgsd4ps2VB5okQOsH-PmTTuXymvCW/view?usp=sharing"))
-        chapterList.add(Chapter("Physics Quantum", topicsList))
+        topicsList.add(Topics("Java Quantum PDF", "https://drive.google.com/file/d/1yMMPgsd4ps2VB5okQOsH-PmTTuXymvCW/view?usp=sharing"))
+        chapterList.add(Chapter("Java Quantum", topicsList))
 
         sendData()
     }

@@ -17,13 +17,46 @@
         android:theme="@style/Theme.NotesDost"
         tools:targetApi="31">
         <activity
-            android:name=".ui.theme.activities.others.About"
+            android:name=".ui.theme.activities.thirdyear.fifthsem.FifthSemActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
-            android:name=".ui.theme.activities.others.Privacy"
+            android:name=".ui.theme.activities.thirdyear.sixthsem.SixthSemActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.fifthsem.DAA"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.fifthsem.COI"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.fifthsem.OOSD"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.fifthsem.DataAnalyticsVisualization"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.fifthsem.DBMS"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.fifthsem.SoftComputing"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+
+        <activity
+            android:name=".ui.theme.activities.others.About"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.others.Privacy"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.firstyear.phygrp.PhyGrpPPSLab"
             android:exported="false"
@@ -60,33 +93,42 @@
             android:name=".ui.theme.activities.firstyear.phygrp.PhyGrpMaths2"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpMaths1"
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpMaths1"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpMaths2"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpMaths2"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpElectronics"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpElectronics"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpElectronicsLab"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpElectronicsLab"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpWorkshopLab"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpWorkshopLab"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpMech"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpMech"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpSoftSkill"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpSoftSkill"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpChemistry"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpChemistry"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpChemistryLab"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.firstyear.chemgrp.ChemGrpChemistryLab"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.firstyear.phygrp.PhyGrpMaths1"
             android:exported="false"
@@ -120,7 +162,15 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
-            android:name=".ui.theme.activities.secondyear.DataScience"
+            android:name=".ui.theme.activities.secondyear.DataStructure"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.secondyear.COA"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.secondyear.UHV"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity

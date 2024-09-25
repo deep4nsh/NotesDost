@@ -83,32 +83,36 @@ class DSTL : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/18kSggkIa-KOmICU8k5SA3b9JV_Aqz_bb/view?usp=drive_link"))
+        topicsList.add(Topics("Relations PDF", "https://drive.google.com/file/d/1yJiwrsxuB1aA9p6zzZP46yD2RvXgCRFv/view?usp=drive_link"))
+        topicsList.add(Topics("Set Theory PDF", "https://drive.google.com/file/d/12F1URGx3j3Kvt7CTaZdquT9pOg-DTBs2/view?usp=drive_link"))
+        topicsList.add(Topics("Funtions PDF", "https://drive.google.com/file/d/12F1URGx3j3Kvt7CTaZdquT9pOg-DTBs2/view?usp=drive_link"))
+        topicsList.add(Topics("Mthematical Induction PDF", "https://drive.google.com/file/d/1n4IaG9kigeMsuKTU4r2_UQGZXuLqI1G5/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1c9GlwVLvoi_FiDleY9N4u8bPkI12NWTr/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1Y3oF9i0q9WH15KiQPKWsvsD37_z4Mfbq/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/13uva4txo3kuvFrk1q-lsNmrU77mVk9p_/view?usp=drive_link"))
+        topicsList.add(Topics("Lttice PDF", "https://drive.google.com/file/d/1Mhx_VozbJXrjzZt9yKGB8jpm99dWSbwe/view?usp=drive_link"))
+        topicsList.add(Topics("Boolean Algebra PDF", "https://drive.google.com/file/d/1U2bi7CH64MCf0i_wWzeCpwOHKuJmuuWb/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1yxzOVWAXfSNJemb9dVGIK6Fmkd6i4R0f/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1ZkBp-n4cWAAgoa4f1DDg7fjQGHte6utN/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1SXbl8nI6b7YXB35wmR806Nwx9FgficWk/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1jVl87N7RBKsGYHdGzTRkHHskwOuttUZ5/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Data Science PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
-        chapterList.add(Chapter("Data Science", topicsList))
+        topicsList.add(Topics("DSTL Quantum PDF", "https://drive.google.com/file/d/1uqndcfAE-8cHG-tsQmpmwJ2lgoxXW8sc/view?usp=sharing"))
+        chapterList.add(Chapter("DSTL Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

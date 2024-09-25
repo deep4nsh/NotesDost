@@ -83,32 +83,36 @@ class MicroProcessor : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/18kSggkIa-KOmICU8k5SA3b9JV_Aqz_bb/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1WMx3AfC8k2l6rI1lL3AQLiwCE5kIlY9U/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1c9GlwVLvoi_FiDleY9N4u8bPkI12NWTr/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1XWuHSSb65xDP8Iq5cerKlCpqVVyxiMAr/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/13uva4txo3kuvFrk1q-lsNmrU77mVk9p_/view?usp=drive_link"))
+        topicsList.add(Topics("NA", ""))
         chapterList.add(Chapter("Unit 3", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1yxzOVWAXfSNJemb9dVGIK6Fmkd6i4R0f/view?usp=drive_link"))
+        topicsList.add(Topics("NA", ""))
         chapterList.add(Chapter("Unit 4", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1SXbl8nI6b7YXB35wmR806Nwx9FgficWk/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 5 PDF", "https://docs.google.com/presentation/d/1XgVMB0e9ib5-EXnqsNreNrA226rSAJLA/edit?usp=drive_link&ouid=106337926642029447298&rtpof=true&sd=true"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Data Science PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
-        chapterList.add(Chapter("Data Science", topicsList))
+        topicsList.add(Topics("Handouts PDF", "https://drive.google.com/file/d/1LlJhdpve393mvJMr5MgxQLipHRNmiHkY/view?usp=drive_link"))
+        chapterList.add(Chapter("All Units Handwritten Notes", topicsList))
+
+        topicsList = mutableListOf()
+        topicsList.add(Topics("Microprocessor Quantum PDF", "https://drive.google.com/file/d/14cHAgZOTEJbfDrOkb50se3-txBtdLPcW/view?usp=sharing"))
+        chapterList.add(Chapter("Microprocessor Quantum", topicsList))
         sendData()
     }
     private fun sendData(){
