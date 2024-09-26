@@ -21,6 +21,10 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
+            android:name=".ui.theme.activities.thirdyear.ThirdYearMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light"/>
+        <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.SixthSemActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>

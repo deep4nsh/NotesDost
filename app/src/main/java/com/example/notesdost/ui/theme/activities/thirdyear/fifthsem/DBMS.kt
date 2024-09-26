@@ -42,9 +42,9 @@ class DBMS : AppCompatActivity() {
         }
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
-            // Go back to the previous activity
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed() // For newer versions
         }
+
 
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {

@@ -19,49 +19,45 @@ class ThirdYearMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third_year_main)
 
-        // Initialize all CardView elements
-        val fifthSemCard: CardView = findViewById(R.id.fifthSemCard)
-        val sixthSemCard: CardView = findViewById(R.id.sixthSemCard)
+        val fifthSemCard:CardView=findViewById(R.id.fifthSemCard)
+        val sixthSemCard:CardView=findViewById(R.id.sixthSemCard)
 
-
-        // Set onClickListeners for each CardView
-        fifthSemCard.setOnClickListener {
-            val intent = Intent(this@ThirdYearMainActivity, FifthSemActivity::class.java)
+        fifthSemCard.setOnClickListener{
+            val intent=Intent(this@ThirdYearMainActivity, FifthSemActivity::class.java)
             startActivity(intent)
         }
-        sixthSemCard.setOnClickListener {
-            val intent = Intent(this@ThirdYearMainActivity, SixthSemActivity::class.java)
+        sixthSemCard.setOnClickListener{
+            val intent=Intent(this@ThirdYearMainActivity, SixthSemActivity::class.java)
             startActivity(intent)
         }
-
-        // Handle back arrow click
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
-            onBackPressed() // Go back to the previous activity
+            onBackPressedDispatcher.onBackPressed() // For newer versions
         }
-
-        // Handle menu icon click to show PopupMenu
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
-            showPopupMenu(it) // Show popup menu
+            // Show popup menu when menu button is clicked
+            showPopupMenu(it)
         }
     }
 
-    // Function to show the popup menu
     private fun showPopupMenu(view: View) {
+        // Create a PopupMenu
         val popupMenu = PopupMenu(this, view)
         val inflater: MenuInflater = popupMenu.menuInflater
-        inflater.inflate(R.menu.main_menu, popupMenu.menu)
+        inflater.inflate(R.menu.main_menu, popupMenu.menu) // Inflate menu items
 
         // Handle menu item clicks
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.privacy -> {
+                    // Open Privacy Policy Activity
                     val intent = Intent(this@ThirdYearMainActivity, Privacy::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.about -> {
+                    // Open About Activity
                     val intent = Intent(this@ThirdYearMainActivity, About::class.java)
                     startActivity(intent)
                     true

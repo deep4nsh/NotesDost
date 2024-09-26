@@ -91,7 +91,7 @@
                 android:padding="8dp">
 
                 <ImageView
-                    android:id="@+id/chemGrpImage"
+                    android:id="@+id/sixthSemImage"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/six" />
