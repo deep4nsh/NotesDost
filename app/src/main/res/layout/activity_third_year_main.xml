@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#7C8993"
     android:orientation="horizontal"
-    tools:context=".ui.theme.activities.thirdyear.ThirdYearMainActivity">
+    tools:context=".ui.theme.activities.others.ThirdYearMainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,9 +22,10 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/jockey_one"
             android:text="SEMESTER"
+            android:letterSpacing="0.05"
             android:textColor="@color/black"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/fifthSemCard"
             android:layout_width="match_parent"

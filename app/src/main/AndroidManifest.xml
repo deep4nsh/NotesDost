@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -23,7 +24,7 @@
         <activity
             android:name=".ui.theme.activities.thirdyear.ThirdYearMainActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.SixthSemActivity"
             android:exported="false"

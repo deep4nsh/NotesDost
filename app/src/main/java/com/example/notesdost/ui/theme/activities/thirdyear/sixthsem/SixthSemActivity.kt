@@ -33,23 +33,31 @@ class SixthSemActivity : AppCompatActivity() {
 
         // Set onClickListeners for each CardView
         coiCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, COI::class.java)
+            val intent = Intent(this@SixthSemActivity, BigData::class.java)
             startActivity(intent)
         }
         daaCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, DAA::class.java)
+            val intent = Intent(this@SixthSemActivity, CN::class.java)
             startActivity(intent)
         }
         davCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, DataAnalyticsVisualization::class.java)
+            val intent = Intent(this@SixthSemActivity, COI6::class.java)
             startActivity(intent)
         }
         dbmsCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, DBMS::class.java)
+            val intent = Intent(this@SixthSemActivity, Quantum::class.java)
             startActivity(intent)
         }
         scCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, SoftComputing::class.java)
+            val intent = Intent(this@SixthSemActivity, SE::class.java)
+            startActivity(intent)
+        }
+        scCard.setOnClickListener {
+            val intent = Intent(this@SixthSemActivity, SPM::class.java)
+            startActivity(intent)
+        }
+        scCard.setOnClickListener {
+            val intent = Intent(this@SixthSemActivity, WebTech::class.java)
             startActivity(intent)
         }
 

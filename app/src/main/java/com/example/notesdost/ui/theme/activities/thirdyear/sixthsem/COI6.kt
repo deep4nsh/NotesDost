@@ -1,7 +1,7 @@
-package com.example.notesdost.ui.theme.activities.thirdyear.sixthsem
+package com.example.notesdost.ui.theme.activities.thirdyear.fifthsem
 
-import android.os.Bundle
 import android.content.Intent
+import android.os.Bundle
 import android.view.MenuInflater
 import android.view.View
 import android.widget.ExpandableListView
@@ -15,8 +15,7 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class Java : AppCompatActivity() {
-
+class COI6 : AppCompatActivity() {
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
     private lateinit var chapterList: MutableList<Chapter>
@@ -24,7 +23,7 @@ class Java : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second_year_automata)
+        setContentView(R.layout.activity_phy_grp_maths1)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()
@@ -38,7 +37,6 @@ class Java : AppCompatActivity() {
                 }
             }
         }
-
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
             // Go back to the previous activity
@@ -51,7 +49,6 @@ class Java : AppCompatActivity() {
             showPopupMenu(it)
         }
     }
-
     private fun showPopupMenu(view: View) {
         // Create a PopupMenu
         val popupMenu = PopupMenu(this, view)
@@ -63,13 +60,13 @@ class Java : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.privacy -> {
                     // Open Privacy Policy Activity
-                    val intent = Intent(this@Java, Privacy::class.java)
+                    val intent = Intent(this@COI6, Privacy::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.about -> {
                     // Open About Activity
-                    val intent = Intent(this@Java, About::class.java)
+                    val intent = Intent(this@COI6, About::class.java)
                     startActivity(intent)
                     true
                 }
@@ -78,39 +75,18 @@ class Java : AppCompatActivity() {
         }
         popupMenu.show()
     }
-
-
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/13wBUwwQq7vkUQf0yywqspqpOTr4H2LPq/view?usp=sharing"))
-        chapterList.add(Chapter("Unit 1", topicsList))
-
-        topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1JYFj5JcUrbcLN4mG9j4shYeswILF78Cf/view?usp=sharing"))
-        chapterList.add(Chapter("Unit 2", topicsList))
+        topicsList.add(Topics("NOtes PDF", "https://drive.google.com/file/d/1JRsaCOUQKIAp8Dmd6UIIvBJtvj0p6XGU/view?usp=drive_link"))
+        chapterList.add(Chapter("Notes", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1bVSfIbsEKZLgCiSdehL98V9VXYo53ZDP/view?usp=sharing"))
-        chapterList.add(Chapter("Unit 3", topicsList))
-
-        topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1fcRUm7hXJHysnWpxh5NDNAjLLzANKNT2/view?usp=sharing"))
-        chapterList.add(Chapter("Unit 4", topicsList))
-
-        topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1dxF_ksa75vZnGs2v-zIx8kX8yA6YniI0/view?usp=sharing"))
-        chapterList.add(Chapter("Unit 5", topicsList))
-
-        topicsList = mutableListOf()
-        topicsList.add(Topics("Java Quantum PDF", "https://drive.google.com/file/d/1yMMPgsd4ps2VB5okQOsH-PmTTuXymvCW/view?usp=sharing"))
-        chapterList.add(Chapter("Java Quantum", topicsList))
-
+        topicsList.add(Topics("COI Quantum PDF", "https://drive.google.com/file/d/1hWJorskQYykvPxa-28jgALqBHl7lVtw0/view?usp=drive_link"))
+        chapterList.add(Chapter("COI Quantum", topicsList))
         sendData()
     }
-
-    private fun sendData() {
+    private fun sendData(){
         customAdapter = CustomAdapter(chapterList, this)
         expandableListView.setAdapter(customAdapter)
     }

@@ -15,7 +15,7 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class DSTL : AppCompatActivity() {
+class SE : AppCompatActivity() {
 
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
@@ -26,7 +26,7 @@ class DSTL : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second_year_automata)
+        setContentView(R.layout.activity_phy_grp_maths1)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()
@@ -64,13 +64,13 @@ class DSTL : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.privacy -> {
                     // Open Privacy Policy Activity
-                    val intent = Intent(this@DSTL, Privacy::class.java)
+                    val intent = Intent(this@SE, Privacy::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.about -> {
                     // Open About Activity
-                    val intent = Intent(this@DSTL, About::class.java)
+                    val intent = Intent(this@SE, About::class.java)
                     startActivity(intent)
                     true
                 }
