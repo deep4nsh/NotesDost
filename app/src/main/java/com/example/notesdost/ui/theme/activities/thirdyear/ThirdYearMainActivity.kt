@@ -2,6 +2,7 @@ package com.example.notesdost.ui.theme.activities.thirdyear
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuInflater
 import android.view.View
 import android.widget.ImageView
@@ -23,6 +24,7 @@ class ThirdYearMainActivity : AppCompatActivity() {
         val sixthSemCard:CardView=findViewById(R.id.sixthSemCard)
 
         fifthSemCard.setOnClickListener{
+            Log.d("ClickEvent", "Fifth Semester Card Clicked")
             val intent=Intent(this@ThirdYearMainActivity, FifthSemActivity::class.java)
             startActivity(intent)
         }

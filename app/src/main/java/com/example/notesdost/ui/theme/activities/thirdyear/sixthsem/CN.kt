@@ -26,7 +26,7 @@ class CN : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_phy_grp_maths1)
+        setContentView(R.layout.activity_spm)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()

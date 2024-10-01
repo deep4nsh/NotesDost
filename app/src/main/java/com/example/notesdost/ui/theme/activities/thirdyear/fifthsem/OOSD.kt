@@ -26,7 +26,7 @@ class OOSD : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second_year_automata)
+        setContentView(R.layout.activity_coi)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()

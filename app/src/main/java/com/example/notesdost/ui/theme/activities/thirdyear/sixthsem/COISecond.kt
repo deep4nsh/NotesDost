@@ -1,4 +1,4 @@
-package com.example.notesdost.ui.theme.activities.thirdyear.fifthsem
+package com.example.notesdost.ui.theme.activities.thirdyear.sixthsem
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,7 +15,7 @@ import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
 
-class COI6 : AppCompatActivity() {
+class COISecond : AppCompatActivity() {
     private lateinit var expandableListView: ExpandableListView
     private lateinit var customAdapter: CustomAdapter
     private lateinit var chapterList: MutableList<Chapter>
@@ -23,7 +23,7 @@ class COI6 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_phy_grp_maths1)
+        setContentView(R.layout.activity_spm)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()
@@ -60,13 +60,13 @@ class COI6 : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.privacy -> {
                     // Open Privacy Policy Activity
-                    val intent = Intent(this@COI6, Privacy::class.java)
+                    val intent = Intent(this@COISecond, Privacy::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.about -> {
                     // Open About Activity
-                    val intent = Intent(this@COI6, About::class.java)
+                    val intent = Intent(this@COISecond, About::class.java)
                     startActivity(intent)
                     true
                 }

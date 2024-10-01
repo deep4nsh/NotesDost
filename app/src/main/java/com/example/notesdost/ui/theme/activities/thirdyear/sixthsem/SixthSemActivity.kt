@@ -11,11 +11,7 @@ import androidx.cardview.widget.CardView
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
-import com.example.notesdost.ui.theme.activities.thirdyear.fifthsem.COI
-import com.example.notesdost.ui.theme.activities.thirdyear.fifthsem.DAA
-import com.example.notesdost.ui.theme.activities.thirdyear.fifthsem.DBMS
-import com.example.notesdost.ui.theme.activities.thirdyear.fifthsem.DataAnalyticsVisualization
-import com.example.notesdost.ui.theme.activities.thirdyear.fifthsem.SoftComputing
+import com.example.notesdost.ui.theme.activities.thirdyear.sixthsem.COISecond
 
 class SixthSemActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,40 +19,42 @@ class SixthSemActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sixth_sem)
 
         // Initialize all CardView elements
-        val coiCard: CardView = findViewById(R.id.coiCard)
-        val daaCard: CardView = findViewById(R.id.daaCard)
-        val davCard: CardView = findViewById(R.id.davCard)
-        val dbmsCard: CardView = findViewById(R.id.dbmsCard)
-        val oosdCard: CardView = findViewById(R.id.oosdCard)
-        val scCard: CardView = findViewById(R.id.scCard)
+        val bigDataCard: CardView = findViewById(R.id.bdCard)
+        val cnCard: CardView = findViewById(R.id.cnCard)
+        val coi_iiCard: CardView = findViewById(R.id.coi_IICard)
+        val quantumCard: CardView = findViewById(R.id.quantumCard)
+        val seCard: CardView = findViewById(R.id.seCard)
+        val spmCard: CardView = findViewById(R.id.spmCard)
+        val webTechCard: CardView = findViewById(R.id.webTechCard)
+
 
 
         // Set onClickListeners for each CardView
-        coiCard.setOnClickListener {
+        bigDataCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, BigData::class.java)
             startActivity(intent)
         }
-        daaCard.setOnClickListener {
+        cnCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, CN::class.java)
             startActivity(intent)
         }
-        davCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, COI6::class.java)
+        coi_iiCard.setOnClickListener {
+            val intent = Intent(this@SixthSemActivity, COISecond::class.java)
             startActivity(intent)
         }
-        dbmsCard.setOnClickListener {
+        quantumCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, Quantum::class.java)
             startActivity(intent)
         }
-        scCard.setOnClickListener {
+        seCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, SE::class.java)
             startActivity(intent)
         }
-        scCard.setOnClickListener {
+        spmCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, SPM::class.java)
             startActivity(intent)
         }
-        scCard.setOnClickListener {
+        webTechCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, WebTech::class.java)
             startActivity(intent)
         }

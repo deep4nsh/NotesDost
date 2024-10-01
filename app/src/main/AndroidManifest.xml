@@ -30,15 +30,44 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
-            android:name=".ui.theme.activities.thirdyear.fifthsem.DAA"
-            android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.COI"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
+            android:name=".ui.theme.activities.thirdyear.sixthsem.COISecond"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.fifthsem.DAA"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.OOSD"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.sixthsem.SPM"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.sixthsem.BigData"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+
+        <activity
+            android:name=".ui.theme.activities.thirdyear.sixthsem.CN"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.sixthsem.Quantum"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.sixthsem.SE"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.thirdyear.sixthsem.WebTech"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
@@ -154,10 +183,7 @@
             android:name=".ui.theme.activities.others.FourthYearMainActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity
-            android:name=".ui.theme.activities.others.ThirdYearMainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar" />
+
         <activity
             android:name=".ui.theme.activities.secondyear.SecondYearMainActivity"
             android:exported="false"

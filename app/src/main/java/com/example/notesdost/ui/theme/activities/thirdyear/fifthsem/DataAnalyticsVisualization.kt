@@ -23,7 +23,7 @@ class DataAnalyticsVisualization : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_phy_grp_maths1)
+        setContentView(R.layout.activity_coi)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()

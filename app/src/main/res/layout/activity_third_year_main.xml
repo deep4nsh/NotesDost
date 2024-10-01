@@ -6,26 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7C8993"
-    android:orientation="horizontal"
-    tools:context=".ui.theme.activities.others.ThirdYearMainActivity">
+    android:orientation="vertical"
+    tools:context=".ui.theme.activities.thirdyear.ThirdYearMainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-        <include layout="@layout/action_bar_top"/>
+        <include layout="@layout/action_bar_top" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/jockey_one"
             android:text="SEMESTER"
             android:letterSpacing="0.05"
             android:textColor="@color/black"
             android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/fifthSemCard"
             android:layout_width="match_parent"
@@ -34,9 +35,7 @@
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="12dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp">
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +45,7 @@
                 android:padding="8dp">
 
                 <ImageView
-                    android:id="@+id/phyGrpImage"
+                    android:id="@+id/fifthSemImage"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/five" />
@@ -60,8 +59,8 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/phyGrpText"
-                        android:layout_width="match_parent"
+                        android:id="@+id/fifthSemText"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="18dp"
                         android:text="5th Semester"
@@ -80,9 +79,7 @@
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="12dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp">
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,8 +103,8 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/chemGrpText"
-                        android:layout_width="match_parent"
+                        android:id="@+id/sixthSemText"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="18dp"
                         android:text="6th Semester"
