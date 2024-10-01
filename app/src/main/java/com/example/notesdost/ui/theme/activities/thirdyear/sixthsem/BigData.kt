@@ -104,7 +104,7 @@ class BigData : AppCompatActivity() {
         chapterList.add(Chapter("Big Data Book", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("NoSQL DOcument", "https://docs.google.com/document/d/1hpkSnLJRQlwbT-8g68Vok46BSvMi5unf/edit?usp=drive_link&ouid=106337926642029447298&rtpof=true&sd=true"))
+        topicsList.add(Topics("NoSQL Document", "https://docs.google.com/document/d/1hpkSnLJRQlwbT-8g68Vok46BSvMi5unf/edit?usp=drive_link&ouid=106337926642029447298&rtpof=true&sd=true"))
         chapterList.add(Chapter("NoSQL Notes", topicsList))
 
         topicsList = mutableListOf()
@@ -116,9 +116,8 @@ class BigData : AppCompatActivity() {
         chapterList.add(Chapter("QP", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("" +
-                " Quantum PDF", "https://drive.google.com/file/d/1cO2j1W_hejdTGiHxRVzGtMsie5xCbCS4/view?usp=sharing"))
-        chapterList.add(Chapter("Automata Quantum", topicsList))
+        topicsList.add(Topics("Quantum PDF", "https://drive.google.com/file/d/1cO2j1W_hejdTGiHxRVzGtMsie5xCbCS4/view?usp=sharing"))
+        chapterList.add(Chapter("Big Data Quantum", topicsList))
         sendData()
     }
     private fun sendData(){
