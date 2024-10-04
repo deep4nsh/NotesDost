@@ -6,7 +6,6 @@ plugins {
 android {
     namespace = "com.example.notesdost"
     compileSdk = 34
-
     defaultConfig {
         applicationId = "com.example.notesdost"
         minSdk = 24
@@ -34,7 +33,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "1.1"
     }
     buildFeatures {
         compose = true
@@ -50,7 +49,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
