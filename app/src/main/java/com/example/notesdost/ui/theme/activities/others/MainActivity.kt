@@ -30,6 +30,11 @@ class MainActivity : ComponentActivity() {
                 true
             }
 
+            R.id.feedback -> {
+                startActivity(Intent(this, Feedback::class.java))
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

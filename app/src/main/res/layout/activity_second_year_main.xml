@@ -470,6 +470,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="16dp"
                         android:padding="3dp"
+                        android:foregroundGravity="center_horizontal"
                         android:src="@drawable/online_service" />
 
                     <TextView
@@ -544,9 +545,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="87dp"
+                        android:layout_width="74dp"
                         android:layout_height="78dp"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_gravity="center"
                         android:layout_marginTop="16dp"
                         android:padding="3dp"
                         android:src="@drawable/business" />
@@ -554,7 +555,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:text="UHV"
                         android:textColor="@color/black"

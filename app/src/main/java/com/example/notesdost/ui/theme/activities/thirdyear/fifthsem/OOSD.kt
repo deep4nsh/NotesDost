@@ -83,36 +83,40 @@ class OOSD : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Relations PDF", "https://drive.google.com/file/d/1yJiwrsxuB1aA9p6zzZP46yD2RvXgCRFv/view?usp=drive_link"))
-        topicsList.add(Topics("Set Theory PDF", "https://drive.google.com/file/d/12F1URGx3j3Kvt7CTaZdquT9pOg-DTBs2/view?usp=drive_link"))
-        topicsList.add(Topics("Funtions PDF", "https://drive.google.com/file/d/12F1URGx3j3Kvt7CTaZdquT9pOg-DTBs2/view?usp=drive_link"))
-        topicsList.add(Topics("Mthematical Induction PDF", "https://drive.google.com/file/d/1n4IaG9kigeMsuKTU4r2_UQGZXuLqI1G5/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1KwgUksb5_ImyOmNalW1kWSTQr5vJX_-I/view?usp=sharing"))
+        topicsList.add(Topics("Unit 1 PPTs", "https://drive.google.com/drive/folders/1tW1GE8f2WPSqjvjFi1SOYP2k_Qcntu8E?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 Handouts", "https://drive.google.com/file/d/1c5IAfALIgywsKNXHH4rWE9p2APwglGew/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1Y3oF9i0q9WH15KiQPKWsvsD37_z4Mfbq/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/10rxTKhEnzdKOUlNYJIAcMCHVHfWVSqfV/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PPTs", "https://drive.google.com/drive/folders/1b8fYyO6T_9QoFtajQFTz9YRHLluGwRMR?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 Handouts", "https://drive.google.com/file/d/1IwdRIR65M_MVPIjdyQ-7DTzURrk5n7eR/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Lttice PDF", "https://drive.google.com/file/d/1Mhx_VozbJXrjzZt9yKGB8jpm99dWSbwe/view?usp=drive_link"))
-        topicsList.add(Topics("Boolean Algebra PDF", "https://drive.google.com/file/d/1U2bi7CH64MCf0i_wWzeCpwOHKuJmuuWb/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1JEl4336hoqFr6harjlK970LlzVziU9E4/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PPTs", "https://drive.google.com/drive/folders/10E-RByb718FFjA-ylNE3i0bOt5-tDu6o?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 Handouts", "https://drive.google.com/file/d/1feFRj9j3s5iPnsrWJhLGvJ15MePtzI7S/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1ZkBp-n4cWAAgoa4f1DDg7fjQGHte6utN/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1czX4ePE7jxFftiw77DRp5cWWvmSlLsQj/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PPTs", "https://drive.google.com/drive/folders/1rDqjObquLkar1Ay082o4VBD8FaP8SmNc?usp=drive_link"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1jVl87N7RBKsGYHdGzTRkHHskwOuttUZ5/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1nPqgy9ZFFWZL7JhWV7sMAKkyQMUNa-yU/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 5 PPTs", "https://drive.google.com/drive/folders/18UVjPqp5ha38HPkirY40we9zZJ7l0pUN?usp=drive_link"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("DSTL Quantum PDF", "https://drive.google.com/file/d/1uqndcfAE-8cHG-tsQmpmwJ2lgoxXW8sc/view?usp=sharing"))
-        chapterList.add(Chapter("DSTL Quantum", topicsList))
+        topicsList.add(Topics("OOSD Quantum PDF", "https://drive.google.com/file/d/1L5QZV9xCXNjzXyC4beD6D7DWiPlcH9Ah/view?usp=drive_link"))
+        chapterList.add(Chapter("OOSD Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

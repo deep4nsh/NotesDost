@@ -98,6 +98,12 @@ class ChemistryGroupActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open About Activity
+                    val intent = Intent(this@ChemistryGroupActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

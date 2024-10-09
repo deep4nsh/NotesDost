@@ -73,6 +73,15 @@ class ChemGrpChemistryLab : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open Feedback Activity
+                    val intent = Intent(
+                        this@ChemGrpChemistryLab,
+                        com.example.notesdost.ui.theme.activities.others.Feedback::class.java
+                    )
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

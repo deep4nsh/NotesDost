@@ -33,7 +33,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.1"
+        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
@@ -73,5 +73,9 @@ dependencies {
     }
     annotationProcessor (libs.compiler)
     implementation (libs.android.gif.drawable)
+    implementation ("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+
+
 
 }

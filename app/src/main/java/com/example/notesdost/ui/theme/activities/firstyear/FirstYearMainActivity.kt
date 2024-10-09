@@ -13,6 +13,7 @@ import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
 import com.example.notesdost.ui.theme.activities.firstyear.chemgrp.ChemistryGroupActivity
 import com.example.notesdost.ui.theme.activities.firstyear.phygrp.PhysicsGroupActivity
+import com.example.notesdost.ui.theme.activities.others.Feedback
 
 class FirstYearMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +62,12 @@ class FirstYearMainActivity : AppCompatActivity() {
                 R.id.about -> {
                     // Open About Activity
                     val intent = Intent(this@FirstYearMainActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.feedback -> {
+                    // Open Feedback Activity
+                    val intent = Intent(this@FirstYearMainActivity, Feedback::class.java)
                     startActivity(intent)
                     true
                 }

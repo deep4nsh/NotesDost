@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,6 +22,7 @@
             android:name=".ui.theme.activities.thirdyear.fifthsem.FifthSemActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
+
         <activity
             android:name=".ui.theme.activities.thirdyear.ThirdYearMainActivity"
             android:exported="false"
@@ -59,10 +61,6 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
-            android:name=".ui.theme.activities.thirdyear.sixthsem.Quantum"
-            android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-        <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.SE"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
@@ -91,6 +89,10 @@
             android:name=".ui.theme.activities.others.Privacy"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.others.Feedback"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
             android:name=".ui.theme.activities.firstyear.phygrp.PhyGrpPPSLab"
             android:exported="false"
@@ -236,17 +238,14 @@
             android:name=".ui.theme.activities.firstyear.FirstYearMainActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity
-            android:name=".ui.theme.activities.others.YearSelectionActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar" />
+
         <activity
             android:name=".ui.theme.activities.others.MainActivity"
-            android:exported="false" />
+            android:exported="true"/>
         <activity
-            android:name=".ui.theme.activities.others.SplashActivity"
+            android:name=".ui.theme.activities.others.YearSelectionActivity"
             android:exported="true"
-            android:theme="@style/Theme.Design.Light.NoActionBar">
+            android:theme="@style/Theme.Design.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -40,18 +40,18 @@ class YearSelectionActivity : AppCompatActivity() {
             val intent = Intent(this@YearSelectionActivity, ThirdYearMainActivity::class.java)
             startActivity(intent)
         }
-        fourthYearCard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, FourthYearMainActivity::class.java)
-            startActivity(intent)
-        }
-        firstYearMCACard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-            startActivity(intent)
-        }
-        secondYearMCACard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-            startActivity(intent)
-        }
+//        fourthYearCard.setOnClickListener {
+//            val intent = Intent(this@YearSelectionActivity, FourthYearMainActivity::class.java)
+//            startActivity(intent)
+//        }
+//        firstYearMCACard.setOnClickListener {
+//            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
+//            startActivity(intent)
+//        }
+//        secondYearMCACard.setOnClickListener {
+//            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
+//            startActivity(intent)
+//        }
 
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
@@ -78,6 +78,12 @@ class YearSelectionActivity : AppCompatActivity() {
                 R.id.about -> {
                     // Open About Activity
                     val intent = Intent(this@YearSelectionActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.feedback -> {
+                    // Open Feedback Activity
+                    val intent = Intent(this@YearSelectionActivity, Feedback::class.java)
                     startActivity(intent)
                     true
                 }

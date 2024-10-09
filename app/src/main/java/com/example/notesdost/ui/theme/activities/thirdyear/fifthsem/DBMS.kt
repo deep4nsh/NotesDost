@@ -83,31 +83,38 @@ class DBMS : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/18kSggkIa-KOmICU8k5SA3b9JV_Aqz_bb/view?usp=drive_link"))
-        chapterList.add(Chapter("Unit 1", topicsList))
+        topicsList.add(Topics("Complete Notes PDF", "https://drive.google.com/file/d/1vSLZKnoDnVdAYIytnwg6ekBEoejf3Rro/view?usp=drive_link"))
+        chapterList.add(Chapter("Complete Notes", topicsList))
+
+        topicsList = mutableListOf()
+        topicsList.add(Topics("ER Models PDF", "https://drive.google.com/file/d/1sHQMdUx8Bfv_FpVeGqBZSRlIHv_WZDm6/view?usp=drive_link"))
+        topicsList.add(Topics("ER Models PDF", "https://drive.google.com/file/d/1kqt-K5UEJf6FeIgh6J5YWs9iyCspq_kq/view?usp=drive_link"))
+        topicsList.add(Topics("Merged PDF", "https://drive.google.com/file/d/1gDYMxs5X9slSqcMct7NLWoC9wiiEcSJ8/view?usp=drive_link"))
+        chapterList.add(Chapter("Unit 1 Notes", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1c9GlwVLvoi_FiDleY9N4u8bPkI12NWTr/view?usp=drive_link"))
+        topicsList.add(Topics("Relational Algebra PDF", "https://drive.google.com/file/d/1c9GlwVLvoi_FiDleY9N4u8bPkI12NWTr/view?usp=drive_link"))
+        topicsList.add(Topics("SQL PDF", "https://drive.google.com/file/d/12EqykmTboWaQbXBnqb_kRfXJDzlb1OZS/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/13uva4txo3kuvFrk1q-lsNmrU77mVk9p_/view?usp=drive_link"))
+        topicsList.add(Topics("Normalisation PDF", "https://drive.google.com/file/d/1GazpTIot7GS4zqFGyAMwPC6S1y_BIm9i/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1yxzOVWAXfSNJemb9dVGIK6Fmkd6i4R0f/view?usp=drive_link"))
-        chapterList.add(Chapter("Unit 4", topicsList))
+        topicsList.add(Topics("Transaction Management & Concurrency Control PDF", "https://drive.google.com/file/d/1fHSGfqkEpzPFYK13yqM13JCdvFYBFyT5/view?usp=drive_link"))
+        chapterList.add(Chapter("Unit 4 & 5", topicsList))
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1SXbl8nI6b7YXB35wmR806Nwx9FgficWk/view?usp=drive_link"))
-        chapterList.add(Chapter("Unit 5", topicsList))
+        topicsList.add(Topics("PYQs PDF", "https://drive.google.com/drive/folders/10xqHSEOAevPyC7RHyv2kPmuufIchdqdP?usp=drive_link"))
+        chapterList.add(Chapter("PYQs", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Data Science PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
+        topicsList.add(Topics("Data Science PDF", "https://drive.google.com/file/d/1N0L6oyQaOwno9rHvPSoHko1ZabVnbv-7/view?usp=drive_link"))
         chapterList.add(Chapter("Data Science", topicsList))
         sendData()
     }

@@ -74,6 +74,12 @@ class Mathematics : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open About Activity
+                    val intent = Intent(this@Mathematics, About::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

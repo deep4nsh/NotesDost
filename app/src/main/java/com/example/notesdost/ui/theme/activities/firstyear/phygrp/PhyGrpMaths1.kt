@@ -74,6 +74,12 @@ class PhyGrpMaths1 : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open About Activity
+                    val intent = Intent(this@PhyGrpMaths1, About::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

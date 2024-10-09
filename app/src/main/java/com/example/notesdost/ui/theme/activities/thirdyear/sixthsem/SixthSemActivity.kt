@@ -22,7 +22,6 @@ class SixthSemActivity : AppCompatActivity() {
         val bigDataCard: CardView = findViewById(R.id.bdCard)
         val cnCard: CardView = findViewById(R.id.cnCard)
         val coi_iiCard: CardView = findViewById(R.id.coi_IICard)
-        val quantumCard: CardView = findViewById(R.id.quantumCard)
         val seCard: CardView = findViewById(R.id.seCard)
         val spmCard: CardView = findViewById(R.id.spmCard)
         val webTechCard: CardView = findViewById(R.id.webTechCard)
@@ -40,10 +39,6 @@ class SixthSemActivity : AppCompatActivity() {
         }
         coi_iiCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, COISecond::class.java)
-            startActivity(intent)
-        }
-        quantumCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, Quantum::class.java)
             startActivity(intent)
         }
         seCard.setOnClickListener {

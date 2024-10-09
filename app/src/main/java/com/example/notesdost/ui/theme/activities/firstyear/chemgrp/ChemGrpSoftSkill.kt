@@ -73,6 +73,12 @@ class ChemGrpSoftSkill : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open About Activity
+                    val intent = Intent(this@ChemGrpSoftSkill, About::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

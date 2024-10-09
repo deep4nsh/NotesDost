@@ -74,6 +74,12 @@ class COA : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open About Activity
+                    val intent = Intent(this@COA, About::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

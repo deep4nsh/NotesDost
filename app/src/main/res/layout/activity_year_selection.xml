@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,28 +8,20 @@
     android:background="#7C8993"
     android:orientation="horizontal"
     tools:context=".ui.theme.activities.others.YearSelectionActivity">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/action_bar_top"/>
+    <include layout="@layout/action_bar_top_ys"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="84dp"
         android:layout_marginTop="5dp"
-        android:src="@drawable/note"/>
-
-    <TextView
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/damion"
-        android:text="Notes"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:src="@drawable/note" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -328,3 +320,4 @@
 
 </LinearLayout>
 </ScrollView>
+</RelativeLayout>

@@ -85,8 +85,8 @@ class DSTL : AppCompatActivity() {
         topicsList = mutableListOf()
         topicsList.add(Topics("Relations PDF", "https://drive.google.com/file/d/1yJiwrsxuB1aA9p6zzZP46yD2RvXgCRFv/view?usp=drive_link"))
         topicsList.add(Topics("Set Theory PDF", "https://drive.google.com/file/d/12F1URGx3j3Kvt7CTaZdquT9pOg-DTBs2/view?usp=drive_link"))
-        topicsList.add(Topics("Funtions PDF", "https://drive.google.com/file/d/12F1URGx3j3Kvt7CTaZdquT9pOg-DTBs2/view?usp=drive_link"))
-        topicsList.add(Topics("Mthematical Induction PDF", "https://drive.google.com/file/d/1n4IaG9kigeMsuKTU4r2_UQGZXuLqI1G5/view?usp=drive_link"))
+        topicsList.add(Topics("Functions PDF", "https://drive.google.com/file/d/12F1URGx3j3Kvt7CTaZdquT9pOg-DTBs2/view?usp=drive_link"))
+        topicsList.add(Topics("Mathematical Induction PDF", "https://drive.google.com/file/d/1n4IaG9kigeMsuKTU4r2_UQGZXuLqI1G5/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
 
@@ -96,7 +96,7 @@ class DSTL : AppCompatActivity() {
 
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Lttice PDF", "https://drive.google.com/file/d/1Mhx_VozbJXrjzZt9yKGB8jpm99dWSbwe/view?usp=drive_link"))
+        topicsList.add(Topics("Lattice PDF", "https://drive.google.com/file/d/1Mhx_VozbJXrjzZt9yKGB8jpm99dWSbwe/view?usp=drive_link"))
         topicsList.add(Topics("Boolean Algebra PDF", "https://drive.google.com/file/d/1U2bi7CH64MCf0i_wWzeCpwOHKuJmuuWb/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
