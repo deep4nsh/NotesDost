@@ -34,6 +34,10 @@ class MainActivity : ComponentActivity() {
                 startActivity(Intent(this, Feedback::class.java))
                 true
             }
+            R.id.quiz -> {
+                startActivity(Intent(this, Quiz::class.java))
+                true
+            }
 
             else -> super.onOptionsItemSelected(item)
         }

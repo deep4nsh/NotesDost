@@ -3,5 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/damion</item>
         <item>@font/jockey_one</item>
+        <item>@font/namdhinggo_bold</item>
+        <item>@font/neuton_extralight</item>
     </array>
 </resources>

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:background="#7C8993"
+    android:background="#081724"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -21,7 +21,7 @@
             android:text="Chapter"
             android:layout_marginLeft="10dp"
             android:textSize="30sp"
-            android:textColor="#346998"
+            android:textColor="#081724"
             android:textStyle="bold"/>
     </androidx.cardview.widget.CardView>
 

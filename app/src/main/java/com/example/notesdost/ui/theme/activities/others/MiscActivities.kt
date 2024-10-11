@@ -10,60 +10,34 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import com.example.notesdost.R
-import com.example.notesdost.ui.theme.activities.firstyear.FirstYearMainActivity
-import com.example.notesdost.ui.theme.activities.secondyear.SecondYearMainActivity
-import com.example.notesdost.ui.theme.activities.thirdyear.ThirdYearMainActivity
+import com.example.notesdost.ui.theme.activities.firstyear.chemgrp.ChemistryGroupActivity
+import com.example.notesdost.ui.theme.activities.firstyear.phygrp.PhysicsGroupActivity
 
-class YearSelectionActivity : AppCompatActivity() {
+class MiscActivities: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_year_selection)
+        setContentView(R.layout.activity_misc)
 
-        val firstYearCard: CardView = findViewById(R.id.firstYear)
-        val secondYearCard: CardView = findViewById(R.id.secondYear)
-        val thirdYearCard: CardView = findViewById(R.id.thirdYear)
-        val fourthYearCard: CardView = findViewById(R.id.fourthYear)
-        val firstYearMCACard: CardView = findViewById(R.id.firstYearMCA)
-        val secondYearMCACard: CardView = findViewById(R.id.secondYearMCA)
+        val notesCard: CardView = findViewById(R.id.notesCard)
+        val quizCard: CardView = findViewById(R.id.quizCard)
 
-
-        firstYearCard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, FirstYearMainActivity::class.java)
+        notesCard.setOnClickListener {
+            val intent = Intent(this@MiscActivities, YearSelectionActivity::class.java)
             startActivity(intent)
         }
-        secondYearCard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, SecondYearMainActivity::class.java)
+        quizCard.setOnClickListener {
+            val intent = Intent(this@MiscActivities, Quiz::class.java)
             startActivity(intent)
         }
-        thirdYearCard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, ThirdYearMainActivity::class.java)
-            startActivity(intent)
-        }
-//        fourthYearCard.setOnClickListener {
-//            val intent = Intent(this@YearSelectionActivity, FourthYearMainActivity::class.java)
-//            startActivity(intent)
-//        }
-//        firstYearMCACard.setOnClickListener {
-//            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-//            startActivity(intent)
-//        }
-//        secondYearMCACard.setOnClickListener {
-//            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-//            startActivity(intent)
-//        }
 
-        val backArrow: ImageView = findViewById(R.id.backArrow)
-        backArrow.setOnClickListener {
-            // Go back to the previous activity
-            onBackPressed()
-        }
-        val menu: ImageView = findViewById(R.id.menuBar)
-        menu.setOnClickListener {
-            // Show popup menu when menu button is clicked
-            showPopupMenu(it)
-        }
+    val menu: ImageView = findViewById(R.id.menuBar)
+    menu.setOnClickListener {
+        // Show popup menu when menu button is clicked
+        showPopupMenu(it)
     }
+}
 
     private fun showPopupMenu(view: View) {
         // Create a PopupMenu
@@ -76,25 +50,25 @@ class YearSelectionActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.privacy -> {
                     // Open Privacy Policy Activity
-                    val intent = Intent(this@YearSelectionActivity, Privacy::class.java)
+                    val intent = Intent(this@MiscActivities, Privacy::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.about -> {
                     // Open About Activity
-                    val intent = Intent(this@YearSelectionActivity, About::class.java)
+                    val intent = Intent(this@MiscActivities, About::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.feedback -> {
                     // Open Feedback Activity
-                    val intent = Intent(this@YearSelectionActivity, Feedback::class.java)
+                    val intent = Intent(this@MiscActivities, Feedback::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.quiz -> {
                     // Open Quiz Activity
-                    val intent = Intent(this@YearSelectionActivity, Quiz::class.java)
+                    val intent = Intent(this@MiscActivities, Quiz::class.java)
                     startActivity(intent)
                     true
                 }
@@ -103,8 +77,6 @@ class YearSelectionActivity : AppCompatActivity() {
         }
         popupMenu.show()
     }
-
-    // This creates the options menu
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return true

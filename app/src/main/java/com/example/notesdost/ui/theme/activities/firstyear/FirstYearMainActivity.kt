@@ -14,6 +14,7 @@ import com.example.notesdost.ui.theme.activities.others.Privacy
 import com.example.notesdost.ui.theme.activities.firstyear.chemgrp.ChemistryGroupActivity
 import com.example.notesdost.ui.theme.activities.firstyear.phygrp.PhysicsGroupActivity
 import com.example.notesdost.ui.theme.activities.others.Feedback
+import com.example.notesdost.ui.theme.activities.others.Quiz
 
 class FirstYearMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7C8993"
+    android:background="#081724"
     android:orientation="horizontal"
     tools:context=".ui.theme.activities.others.YearSelectionActivity">
 <ScrollView
@@ -15,7 +15,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/action_bar_top_ys"/>
+    <include layout="@layout/action_bar_top"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/jockey_one"
         android:text="B.Tech."
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold" />
     <androidx.cardview.widget.CardView
@@ -48,7 +48,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#CAC4C4"
+            android:background="#FFFFFF"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -94,7 +94,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#CAC4C4"
+            android:background="#FFFFFF"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -140,7 +140,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#CAC4C4"
+            android:background="#FFFFFF"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -186,7 +186,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#CAC4C4"
+            android:background="#FFFFFF"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -223,7 +223,7 @@
         android:textSize="40sp"
         android:layout_marginLeft="10dp"
         android:fontFamily="@font/jockey_one"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:text="MCA"/>
     <androidx.cardview.widget.CardView
@@ -241,7 +241,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#CAC4C4"
+            android:background="#FFFFFF"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -287,7 +287,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#CAC4C4"
+            android:background="#FFFFFF"
             android:orientation="horizontal"
             android:padding="8dp">
 

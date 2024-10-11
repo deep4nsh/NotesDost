@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7C8993"
+    android:background="#081724"
     tools:context=".ui.theme.activities.thirdyear.fifthsem.FifthSemActivity">
 
     <View
@@ -65,7 +65,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
                     <ImageView
                         android:layout_width="87dp"
@@ -102,7 +102,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -142,7 +142,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -182,7 +182,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -219,7 +219,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
                     <ImageView
                         android:layout_width="87dp"
@@ -254,7 +254,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
                     <ImageView
                         android:layout_width="87dp"

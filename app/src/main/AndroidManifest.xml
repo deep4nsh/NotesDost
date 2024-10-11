@@ -28,6 +28,10 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
+            android:name=".ui.theme.activities.others.Quiz"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.SixthSemActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
@@ -244,6 +248,10 @@
             android:exported="true"/>
         <activity
             android:name=".ui.theme.activities.others.YearSelectionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.others.MiscActivities"
             android:exported="true"
             android:theme="@style/Theme.Design.Light.NoActionBar" >
             <intent-filter>
