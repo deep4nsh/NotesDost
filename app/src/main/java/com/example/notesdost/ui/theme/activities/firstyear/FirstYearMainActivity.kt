@@ -72,6 +72,12 @@ class FirstYearMainActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@FirstYearMainActivity, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

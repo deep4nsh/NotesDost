@@ -10,10 +10,8 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 import com.example.notesdost.R
-import com.example.notesdost.ui.theme.activities.firstyear.chemgrp.ChemistryGroupActivity
-import com.example.notesdost.ui.theme.activities.firstyear.phygrp.PhysicsGroupActivity
+import com.example.notesdost.ui.theme.activities.others.WifiActivity
 
 class MiscActivities: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +20,7 @@ class MiscActivities: AppCompatActivity() {
 
         val notesCard: CardView = findViewById(R.id.notesCard)
         val quizCard: CardView = findViewById(R.id.quizCard)
+        val wifiCard: CardView = findViewById(R.id.wifiCard)
 
         notesCard.setOnClickListener {
             val intent = Intent(this@MiscActivities, YearSelectionActivity::class.java)
@@ -29,6 +28,16 @@ class MiscActivities: AppCompatActivity() {
         }
         quizCard.setOnClickListener {
             val intent = Intent(this@MiscActivities, Quiz::class.java)
+            startActivity(intent)
+        }
+        wifiCard.setOnClickListener {
+            //Toast.makeText(this, "Under development.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@MiscActivities, WifiActivity::class.java)
+            startActivity(intent)
+        }
+        val feedbackImg: ImageView = findViewById(R.id.feedbackImg)
+        feedbackImg.setOnClickListener {
+            val intent = Intent(this@MiscActivities, Feedback::class.java)
             startActivity(intent)
         }
 

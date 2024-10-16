@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 
 class PhysicsGroupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -105,6 +106,12 @@ class PhysicsGroupActivity : AppCompatActivity() {
                 R.id.feedback -> {
                     // Open About Activity
                     val intent = Intent(this@PhysicsGroupActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@PhysicsGroupActivity, Quiz::class.java)
                     startActivity(intent)
                     true
                 }

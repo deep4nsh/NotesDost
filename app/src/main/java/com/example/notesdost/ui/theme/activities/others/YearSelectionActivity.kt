@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.notesdost.R
@@ -40,18 +41,15 @@ class YearSelectionActivity : AppCompatActivity() {
             val intent = Intent(this@YearSelectionActivity, ThirdYearMainActivity::class.java)
             startActivity(intent)
         }
-//        fourthYearCard.setOnClickListener {
-//            val intent = Intent(this@YearSelectionActivity, FourthYearMainActivity::class.java)
-//            startActivity(intent)
-//        }
-//        firstYearMCACard.setOnClickListener {
-//            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-//            startActivity(intent)
-//        }
-//        secondYearMCACard.setOnClickListener {
-//            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-//            startActivity(intent)
-//        }
+        fourthYearCard.setOnClickListener {
+            Toast.makeText(this, "Under development.", Toast.LENGTH_SHORT).show()
+        }
+        firstYearMCACard.setOnClickListener {
+            Toast.makeText(this, "Under development", Toast.LENGTH_SHORT).show()
+        }
+        secondYearMCACard.setOnClickListener {
+            Toast.makeText(this, "Under development", Toast.LENGTH_SHORT).show()
+        }
 
         val backArrow: ImageView = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {

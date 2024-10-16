@@ -75,6 +75,9 @@ dependencies {
     implementation (libs.android.gif.drawable)
     implementation ("com.facebook.shimmer:shimmer:0.5.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation ("com.airbnb.android:lottie:6.5.2")
+    implementation ("com.google.android.material:material:1.9.0")
+    implementation ("com.airbnb.android:lottie:5.2.0")
 
 
 

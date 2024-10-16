@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 
 class SecondYearMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -105,6 +106,18 @@ class SecondYearMainActivity : AppCompatActivity() {
                 }
                 R.id.about -> {
                     val intent = Intent(this@SecondYearMainActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.feedback -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@SecondYearMainActivity, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@SecondYearMainActivity, Quiz::class.java)
                     startActivity(intent)
                     true
                 }

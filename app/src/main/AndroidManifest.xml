@@ -2,11 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,72 +23,85 @@
         android:theme="@style/Theme.NotesDost"
         tools:targetApi="31">
         <activity
+            android:name=".ui.theme.activities.others.WebViewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.others.SaveCredentialsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.FifthSemActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.others.WifiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.ThirdYearMainActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".ui.theme.activities.others.LoginToWifiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.others.Quiz"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.SixthSemActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.COI"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.COISecond"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.DAA"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.OOSD"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.SPM"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.BigData"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.CN"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.SE"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.sixthsem.WebTech"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.DataAnalyticsVisualization"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.DBMS"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.thirdyear.fifthsem.SoftComputing"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
-
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.others.About"
             android:exported="false"
@@ -96,7 +113,7 @@
         <activity
             android:name=".ui.theme.activities.others.Feedback"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.firstyear.phygrp.PhyGrpPPSLab"
             android:exported="false"
@@ -189,7 +206,6 @@
             android:name=".ui.theme.activities.others.FourthYearMainActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-
         <activity
             android:name=".ui.theme.activities.secondyear.SecondYearMainActivity"
             android:exported="false"
@@ -242,10 +258,9 @@
             android:name=".ui.theme.activities.firstyear.FirstYearMainActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-
         <activity
             android:name=".ui.theme.activities.others.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ui.theme.activities.others.YearSelectionActivity"
             android:exported="true"
@@ -253,7 +268,7 @@
         <activity
             android:name=".ui.theme.activities.others.MiscActivities"
             android:exported="true"
-            android:theme="@style/Theme.Design.Light.NoActionBar" >
+            android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

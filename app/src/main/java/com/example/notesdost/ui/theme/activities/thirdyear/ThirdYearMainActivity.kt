@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.activities.thirdyear.fifthsem.FifthSemActivity
 import com.example.notesdost.ui.theme.activities.thirdyear.sixthsem.SixthSemActivity
 
@@ -61,6 +62,18 @@ class ThirdYearMainActivity : AppCompatActivity() {
                 R.id.about -> {
                     // Open About Activity
                     val intent = Intent(this@ThirdYearMainActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.feedback -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@ThirdYearMainActivity, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@ThirdYearMainActivity, Quiz::class.java)
                     startActivity(intent)
                     true
                 }
