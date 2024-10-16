@@ -12,7 +12,7 @@
     <ImageButton
         android:id="@+id/btn_connect"
         android:layout_width="wrap_content"
-        android:layout_height="237dp"
+        android:layout_height="223dp"
         android:layout_marginBottom="16dp"
         android:background="@null"
         android:padding="16dp"
@@ -32,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save Credentials"
+        android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:background="@null"
         android:fontFamily="@font/work_sans_semibold"
