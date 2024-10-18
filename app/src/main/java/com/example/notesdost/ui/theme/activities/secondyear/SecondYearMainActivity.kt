@@ -30,6 +30,7 @@ class SecondYearMainActivity : AppCompatActivity() {
         val osCard: CardView = findViewById(R.id.osCard)
         val coaCard: CardView = findViewById(R.id.coaCard)
         val uhvCard: CardView = findViewById(R.id.uhvCard)
+        val cssCard: CardView = findViewById(R.id.cssCard)
 
         // Set onClickListeners for each CardView
         automataCard.setOnClickListener {
@@ -74,6 +75,10 @@ class SecondYearMainActivity : AppCompatActivity() {
         }
         coaCard.setOnClickListener {
             val intent = Intent(this@SecondYearMainActivity, COA::class.java)
+            startActivity(intent)
+        }
+        coaCard.setOnClickListener {
+            val intent = Intent(this@SecondYearMainActivity, CSS::class.java)
             startActivity(intent)
         }
 
