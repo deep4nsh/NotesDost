@@ -23,6 +23,10 @@
         android:theme="@style/Theme.NotesDost"
         tools:targetApi="31">
         <activity
+            android:name=".ui.theme.activities.others.ChatGPT"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
             android:name=".ui.theme.activities.others.WebViewActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />

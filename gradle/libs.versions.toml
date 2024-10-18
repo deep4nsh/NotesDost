@@ -15,6 +15,9 @@ activity = "1.9.2"
 constraintlayout = "2.1.4"
 pdfViewerAndroid = "2.0"
 appcompatVersion = "1.7.0"
+volley = "1.2.1"
+toolsCore = "1.0.0-alpha10"
+gamesActivity = "3.0.5"
 
 [libraries]
 android-gif-drawable = { module = "pl.droidsonroids.gif:android-gif-drawable", version.ref = "androidGifDrawable" }
@@ -38,6 +41,9 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 pdf-viewer-android = { module = "com.github.Foysalofficial:pdf-viewer-android", version.ref = "pdfViewerAndroid" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
+androidx-tools-core = { group = "androidx.privacysandbox.tools", name = "tools-core", version.ref = "toolsCore" }
+androidx-games-activity = { group = "androidx.games", name = "games-activity", version.ref = "gamesActivity" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

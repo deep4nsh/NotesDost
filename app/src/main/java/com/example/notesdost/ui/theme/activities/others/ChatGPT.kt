@@ -1,6 +1,5 @@
 package com.example.notesdost.ui.theme.activities.others
 
-import android.content.Intent
 import android.os.Bundle
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
@@ -8,7 +7,6 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,14 +19,14 @@ import com.android.volley.toolbox.Volley
 import com.example.notesdost.R
 import org.json.JSONObject
 
-class Quiz : AppCompatActivity() {
+class ChatGPT : AppCompatActivity() {
 
     private lateinit var webView: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_quiz)
+        setContentView(R.layout.activity_chat_gpt)
 
         // Apply window insets for edge-to-edge display
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -36,23 +34,17 @@ class Quiz : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val chatGPTImg: ImageView = findViewById(R.id.chatGPTImg)
-        chatGPTImg.setOnClickListener {
-            // Go back to the previous activity
-            val intent=Intent(this@Quiz, ChatGPT::class.java)
-            startActivity(intent)
-        }
 
         // Initialize WebView and configure its settings
         webView = findViewById(R.id.webView)
         configureWebView()
         webView.addJavascriptInterface(QuizInterface(), "AndroidInterface")
-        webView.loadUrl("https://quiz.abesaims.site/")
+        webView.loadUrl("https://chatgpt.com/")
     }
-
 
     private fun configureWebView() {
         val webSettings = webView.settings
+
         // Enable JavaScript for interactive content
         webSettings.javaScriptEnabled = true
         // Enable DOM storage to support features like local storage
