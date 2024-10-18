@@ -24,7 +24,7 @@ class TC : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_phy_grp_maths1)
+        setContentView(R.layout.activity_second_year_automata)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()
@@ -115,8 +115,8 @@ class TC : AppCompatActivity() {
         chapterList.add(Chapter("All Units", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Technical Communication Quantum PDF", "https://drive.google.com/file/d/1UiNzB6Hj_H73TJGiGAJo118EAIoeM2BM/view?usp=sharing"))
-        chapterList.add(Chapter("Technical Communication Quantum", topicsList))
+        topicsList.add(Topics("TC Quantum PDF", "https://drive.google.com/file/d/1UiNzB6Hj_H73TJGiGAJo118EAIoeM2BM/view?usp=sharing"))
+        chapterList.add(Chapter("TC Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

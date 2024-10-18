@@ -19,6 +19,7 @@
         android:textStyle="bold"/>
 
     <TextView
+        android:id="@+id/aboutText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -29,6 +30,14 @@
         android:textColor="@color/white"
         android:fontFamily="@font/jockey_one"
         android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/linkedInImg"
+        android:layout_width="62dp"
+        android:layout_height="90dp"
+        android:src="@drawable/linkedin"
+        android:layout_below="@id/aboutText"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>

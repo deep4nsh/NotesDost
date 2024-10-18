@@ -27,6 +27,14 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
+            android:name=".ui.theme.activities.secondyear.CSS"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.secondyear.TC"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
             android:name=".ui.theme.activities.others.WebViewActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />

@@ -97,7 +97,7 @@ class ChemGrpWorkshopLab : AppCompatActivity() {
         topicsList = mutableListOf()
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Lab Manual PDF", "https://drive.google.com/file/d/17rvoTDpIE4Ylv0bLi8aUZrMyE_yp1VlA/view?usp=drive_link"))
+        topicsList.add(Topics("Lab Experiments Docs PDF", "https://drive.google.com/drive/folders/1IHzpwDU7c5GD7eJZcgjzIdqyn_3haVYA"))
         chapterList.add(Chapter("Lab Manual Workshop", topicsList))
 
         sendData()
