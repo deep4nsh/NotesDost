@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -81,6 +82,8 @@ dependencies {
     implementation ("com.airbnb.android:lottie:6.5.2")
     implementation ("com.google.android.material:material:1.9.0")
     implementation ("com.airbnb.android:lottie:5.2.0")
+    implementation(libs.firebase.bom)
+    implementation(libs.firebase.analytics)
 
 
 
