@@ -1,6 +1,5 @@
 package com.example.notesdost.ui.theme.activities.others
 
-import android.content.Intent
 import android.os.Bundle
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
@@ -8,14 +7,12 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.example.notesdost.R
@@ -44,49 +41,44 @@ class Attendance : AppCompatActivity() {
         webView.loadUrl("https://abes.web.simplifii.com/index.php")
     }
 
-
     private fun configureWebView() {
         val webSettings = webView.settings
-        // Enable JavaScript for interactive content
-        webSettings.javaScriptEnabled = true
-        // Enable DOM storage to support features like local storage
-        webSettings.domStorageEnabled = true
-        // Use cache if available, otherwise load from network
-        webSettings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
-        // Load the page in a mode that fits the content width
-        webSettings.loadWithOverviewMode = true
-        // Set the viewport to fit the page in the WebView
-        webSettings.useWideViewPort = true
 
-        // Enable zoom controls for a better user experience
-        webSettings.builtInZoomControls = true
-        webSettings.displayZoomControls = false
+        // Enable essential features for better performance
+        webSettings.apply {
+            javaScriptEnabled = true
+            domStorageEnabled = true
+            cacheMode = WebSettings.LOAD_NO_CACHE // Always load fresh content
+            loadWithOverviewMode = true
+            useWideViewPort = true
+            builtInZoomControls = true
+            displayZoomControls = false
+            setSupportZoom(true)
+            allowFileAccess = true
+            allowContentAccess = true
+        }
 
-        // Use hardware acceleration for improved performance
+        // Improve rendering performance using hardware acceleration
         webView.setLayerType(WebView.LAYER_TYPE_HARDWARE, null)
 
-        // Set a WebViewClient to handle URL loading within the WebView
+        // Set a custom WebViewClient to handle page loading
         webView.webViewClient = object : WebViewClient() {
-            override fun shouldOverrideUrlLoading(
-                view: WebView,
-                request: WebResourceRequest
-            ): Boolean {
-                return false // Allow the WebView to load the URL internally
+            override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+                return false // Allow internal URL loading for better performance
             }
 
             override fun onPageFinished(view: WebView, url: String) {
                 super.onPageFinished(view, url)
-                // Additional actions after page load, if needed
+                // Additional actions after page load if needed
             }
         }
 
-        // Use WebChromeClient for JavaScript dialogs and other UI features
+        // Use WebChromeClient for JavaScript dialogs and UI features
         webView.webChromeClient = WebChromeClient()
     }
 
-    // JavaScript interface class for interacting with the WebView
+    // JavaScript interface for WebView interaction
     inner class QuizInterface {
-
         @JavascriptInterface
         fun getAnswerFromChatGPT(question: String) {
             fetchChatGPTResponse(question)
@@ -96,15 +88,14 @@ class Attendance : AppCompatActivity() {
     // Function to fetch ChatGPT response using your backend server
     private fun fetchChatGPTResponse(question: String) {
         val url = "https://your-backend-url/chatgpt-response" // Replace with your backend URL
-        val requestBody = JSONObject()
-        requestBody.put("query", question)
+        val requestBody = JSONObject().apply {
+            put("query", question)
+        }
 
         val request = JsonObjectRequest(
-            Request.Method.POST,
-            url,
-            requestBody,
+            Request.Method.POST, url, requestBody,
             { response ->
-                val chatResponse = response.getString("response")
+                val chatResponse = response.optString("response", "No response")
                 runOnUiThread {
                     displayChatGPTResponse(chatResponse)
                 }
