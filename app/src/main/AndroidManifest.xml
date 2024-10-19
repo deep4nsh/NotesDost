@@ -23,17 +23,21 @@
         android:theme="@style/Theme.NotesDost"
         tools:targetApi="31">
         <activity
-            android:name=".ui.theme.activities.others.ChatGPT"
+            android:name=".ui.theme.activities.others.Attendance"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.theme.activities.others.ChatGPT"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.secondyear.CSS"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.secondyear.TC"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity
             android:name=".ui.theme.activities.others.WebViewActivity"
             android:exported="false"

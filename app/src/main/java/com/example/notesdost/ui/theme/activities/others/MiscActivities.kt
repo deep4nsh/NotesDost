@@ -21,6 +21,7 @@ class MiscActivities: AppCompatActivity() {
         val notesCard: CardView = findViewById(R.id.notesCard)
         val quizCard: CardView = findViewById(R.id.quizCard)
         val wifiCard: CardView = findViewById(R.id.wifiCard)
+        val attendanceCard: CardView = findViewById(R.id.attendanceCard)
 
         notesCard.setOnClickListener {
             val intent = Intent(this@MiscActivities, YearSelectionActivity::class.java)
@@ -33,6 +34,11 @@ class MiscActivities: AppCompatActivity() {
         wifiCard.setOnClickListener {
             //Toast.makeText(this, "Under development.", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@MiscActivities, WifiActivity::class.java)
+            startActivity(intent)
+        }
+        attendanceCard.setOnClickListener {
+            //Toast.makeText(this, "Under development.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@MiscActivities, Attendance::class.java)
             startActivity(intent)
         }
         val feedbackImg: ImageView = findViewById(R.id.feedbackImg)

@@ -1,7 +1,6 @@
 [versions]
 agp = "8.6.1"
 androidGifDrawable = "1.2.27"
-firebaseBom = "33.4.0"
 glide = "4.15.1"
 kotlin = "1.9.0"
 junit = "4.13.2"
@@ -12,19 +11,20 @@ activityCompose = "1.9.2"
 composeBom = "2024.09.00"
 appcompat = "1.7.0"
 material = "1.12.0"
-activity = "1.9.2"
 constraintlayout = "2.1.4"
 pdfViewerAndroid = "2.0"
-appcompatVersion = "1.7.0"
 volley = "1.2.1"
 toolsCore = "1.0.0-alpha10"
 gamesActivity = "3.0.5"
+firebaseAuth = "23.0.0"
+firebaseFirestore = "25.1.0"
+firebaseCrashlytics = "19.2.0"
+googleFirebaseCrashlytics = "3.0.2"
+firebaseAnalytics = "22.1.2"
 
 [libraries]
 android-gif-drawable = { module = "pl.droidsonroids.gif:android-gif-drawable", version.ref = "androidGifDrawable" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -40,15 +40,14 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activityCompose" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-pdf-viewer-android = { module = "com.github.Foysalofficial:pdf-viewer-android", version.ref = "pdfViewerAndroid" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
 androidx-tools-core = { group = "androidx.privacysandbox.tools", name = "tools-core", version.ref = "toolsCore" }
 androidx-games-activity = { group = "androidx.games", name = "games-activity", version.ref = "gamesActivity" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-

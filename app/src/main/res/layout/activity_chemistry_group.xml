@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7C8993"
+    android:background="#081724"
     tools:context=".ui.theme.activities.firstyear.phygrp.PhysicsGroupActivity">
 
     <View
@@ -27,7 +27,7 @@
         android:fontFamily="@font/jockey_one"
         android:gravity="center"
         android:text="Chemistry Group Subjects"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -63,7 +63,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -102,7 +102,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -142,7 +142,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -182,7 +182,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -222,7 +222,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -262,7 +262,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -303,7 +303,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -341,7 +341,7 @@
                 <LinearLayout
                     android:layout_width="182dp"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -382,7 +382,7 @@
                 <LinearLayout
                     android:layout_width="182dp"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
