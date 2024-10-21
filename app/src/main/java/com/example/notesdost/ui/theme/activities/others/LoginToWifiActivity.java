@@ -31,8 +31,6 @@ public class LoginToWifiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_to_wifi);
 
         // Set up the custom toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         // Enable the back button in the action bar
         if (getSupportActionBar() != null) {
@@ -41,7 +39,6 @@ public class LoginToWifiActivity extends AppCompatActivity {
         }
 
         webView = findViewById(R.id.webView);
-        progressBar = findViewById(R.id.progressBar);
 
         setupWebView();
         loginToWebsite();
@@ -77,8 +74,6 @@ public class LoginToWifiActivity extends AppCompatActivity {
                                     "document.getElementById('loginbutton').click();",
                             null
                     );
-
-
 
                     if (errorDialog != null && errorDialog.isShowing()) {
                         errorDialog.dismiss(); // Dismiss the error dialog if showing

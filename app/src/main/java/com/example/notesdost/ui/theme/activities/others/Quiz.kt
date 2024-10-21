@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.example.notesdost.R
@@ -36,42 +35,33 @@ class Quiz : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val chatGPTImg: ImageView = findViewById(R.id.chatGPTImg)
-        chatGPTImg.setOnClickListener {
-            // Go back to the previous activity
-            val intent=Intent(this@Quiz, ChatGPT::class.java)
-            startActivity(intent)
-        }
 
         // Initialize WebView and configure its settings
         webView = findViewById(R.id.webView)
         configureWebView()
         webView.addJavascriptInterface(QuizInterface(), "AndroidInterface")
         webView.loadUrl("https://quiz.abesaims.site/")
+
+        // Set up ChatGPT icon to navigate to a new activity
+        val chatGPTImg: ImageView = findViewById(R.id.chatGPTImg)
+        chatGPTImg.setOnClickListener {
+            val intent = Intent(this@Quiz, ChatGPT::class.java)
+            startActivity(intent)
+        }
     }
 
-
+    // Configures WebView settings for better interaction and performance
     private fun configureWebView() {
         val webSettings = webView.settings
-        // Enable JavaScript for interactive content
         webSettings.javaScriptEnabled = true
-        // Enable DOM storage to support features like local storage
         webSettings.domStorageEnabled = true
-        // Use cache if available, otherwise load from network
         webSettings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
-        // Load the page in a mode that fits the content width
         webSettings.loadWithOverviewMode = true
-        // Set the viewport to fit the page in the WebView
         webSettings.useWideViewPort = true
-
-        // Enable zoom controls for a better user experience
         webSettings.builtInZoomControls = true
         webSettings.displayZoomControls = false
-
-        // Use hardware acceleration for improved performance
         webView.setLayerType(WebView.LAYER_TYPE_HARDWARE, null)
 
-        // Set a WebViewClient to handle URL loading within the WebView
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
                 view: WebView,
@@ -86,7 +76,6 @@ class Quiz : AppCompatActivity() {
             }
         }
 
-        // Use WebChromeClient for JavaScript dialogs and other UI features
         webView.webChromeClient = WebChromeClient()
     }
 
@@ -101,7 +90,7 @@ class Quiz : AppCompatActivity() {
 
     // Function to fetch ChatGPT response using your backend server
     private fun fetchChatGPTResponse(question: String) {
-        val url = "https://your-backend-url/chatgpt-response" // Replace with your backend URL
+        val url = "https://your-backend-url/chatgpt-response"
         val requestBody = JSONObject()
         requestBody.put("query", question)
 
@@ -120,12 +109,13 @@ class Quiz : AppCompatActivity() {
             }
         )
 
+        // Add the request to the queue
         Volley.newRequestQueue(this).add(request)
     }
 
     // Display the ChatGPT response in the WebView using JavaScript
     private fun displayChatGPTResponse(response: String) {
-        val jsCode = "javascript:document.getElementById('chatgpt-answer').innerHTML = '$response';"
+        val jsCode = "javascript:document.getElementById('chatgpt-answer').innerHTML = '${response.replace("'", "\\'")}';"
         webView.evaluateJavascript(jsCode, null)
     }
 }
