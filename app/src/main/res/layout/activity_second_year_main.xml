@@ -36,18 +36,22 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/top_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
         android:fillViewport="true">
+
         <GridLayout
             android:id="@+id/gridLayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
+            android:layout_gravity="center_horizontal"
             android:columnCount="2"
             android:rowCount="8">
 
@@ -328,6 +332,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/osCard"
                 android:layout_width="150dp"
@@ -336,13 +341,13 @@
                 android:layout_rowWeight="1"
                 android:layout_column="1"
                 android:layout_columnWeight="1"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:elevation="12dp"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:orientation="vertical">
@@ -382,7 +387,7 @@
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:orientation="vertical">
@@ -406,6 +411,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/sensorCard"
                 android:layout_width="150dp"
@@ -420,7 +426,7 @@
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:orientation="vertical">
@@ -453,13 +459,13 @@
                 android:layout_rowWeight="1"
                 android:layout_column="1"
                 android:layout_columnWeight="1"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:elevation="12dp"
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:orientation="vertical">
@@ -469,8 +475,8 @@
                         android:layout_height="78dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="16dp"
-                        android:padding="3dp"
                         android:foregroundGravity="center_horizontal"
+                        android:padding="3dp"
                         android:src="@drawable/online_service" />
 
                     <TextView
@@ -487,43 +493,43 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-            android:id="@+id/javaCard"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_row="5"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
-            android:elevation="12dp"
-            app:cardCornerRadius="15dp">
+                android:id="@+id/javaCard"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_row="5"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="12dp"
+                app:cardCornerRadius="15dp">
 
-            <LinearLayout
-                android:layout_width="182dp"
-                android:layout_height="match_parent"
-                android:background="#FFFFFF"
-                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="78dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
-                    android:padding="3dp"
-                    android:src="@drawable/java" />
+                    <ImageView
+                        android:layout_width="87dp"
+                        android:layout_height="78dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:padding="3dp"
+                        android:src="@drawable/java" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:text="Java"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="Java"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/uhvCard"
@@ -539,7 +545,7 @@
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:orientation="vertical">

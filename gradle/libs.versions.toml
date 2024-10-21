@@ -16,11 +16,9 @@ pdfViewerAndroid = "2.0"
 volley = "1.2.1"
 toolsCore = "1.0.0-alpha10"
 gamesActivity = "3.0.5"
-firebaseAuth = "23.0.0"
-firebaseFirestore = "25.1.0"
-firebaseCrashlytics = "19.2.0"
-googleFirebaseCrashlytics = "3.0.2"
+
 firebaseAnalytics = "22.1.2"
+
 
 [libraries]
 android-gif-drawable = { module = "pl.droidsonroids.gif:android-gif-drawable", version.ref = "androidGifDrawable" }
