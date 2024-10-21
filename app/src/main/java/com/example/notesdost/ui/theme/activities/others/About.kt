@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,9 +26,13 @@ class About : AppCompatActivity() {
 
         // Find the LinkedIn image by its ID
         val linkedinImage: ImageView = findViewById(R.id.linkedInImg)
-
-        // Set an OnClickListener to navigate to the LinkedIn link
+        val linkedinText: TextView =findViewById(R.id.linkedInText)
         linkedinImage.setOnClickListener {
+            val linkedinUrl = "https://www.linkedin.com/in/deepanshdev/" // Replace with the desired LinkedIn URL
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl))
+            startActivity(intent)
+        }
+        linkedinText.setOnClickListener {
             val linkedinUrl = "https://www.linkedin.com/in/deepanshdev/" // Replace with the desired LinkedIn URL
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl))
             startActivity(intent)
