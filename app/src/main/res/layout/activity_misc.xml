@@ -79,9 +79,8 @@
 
                         <TextView
                             android:id="@+id/quizText"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="18dp"
                             android:text="Quiz"
                             android:textColor="#081724"
                             android:textSize="30sp"
@@ -127,7 +126,7 @@
 
                         <TextView
                             android:id="@+id/notesText"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Notes"
                             android:textColor="#081724"
@@ -174,7 +173,7 @@
 
                         <TextView
                             android:id="@+id/wifiText"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Wifi"
                             android:textColor="#081724"
@@ -221,7 +220,7 @@
 
                         <TextView
                             android:id="@+id/attendanceText"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Attendance"
                             android:textColor="#081724"
