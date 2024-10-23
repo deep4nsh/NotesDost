@@ -29,6 +29,10 @@
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity
+            android:name=".ui.theme.activities.others.Calculator"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+        <activity
             android:name=".ui.theme.activities.others.ChatGPT"
             android:exported="false"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
