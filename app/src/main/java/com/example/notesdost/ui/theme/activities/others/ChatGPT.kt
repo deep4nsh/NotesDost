@@ -1,23 +1,18 @@
 package com.example.notesdost.ui.theme.activities.others
 
+import android.graphics.Rect
 import android.os.Bundle
-import android.webkit.JavascriptInterface
-import android.webkit.WebChromeClient
+import android.view.View
+import android.view.ViewTreeObserver
 import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
 import com.example.notesdost.R
-import org.json.JSONObject
 
 class ChatGPT : AppCompatActivity() {
 
@@ -35,11 +30,13 @@ class ChatGPT : AppCompatActivity() {
             insets
         }
 
-        // Initialize WebView and configure its settings
+        // Initialize WebView and load the URL
         webView = findViewById(R.id.webView)
         configureWebView()
-        webView.addJavascriptInterface(QuizInterface(), "AndroidInterface")
         webView.loadUrl("https://chatgpt.com/")
+
+        // Adjust WebView when keyboard is shown
+        handleKeyboardVisibility()
     }
 
     private fun configureWebView() {
@@ -47,17 +44,14 @@ class ChatGPT : AppCompatActivity() {
 
         // Enable JavaScript for interactive content
         webSettings.javaScriptEnabled = true
-        // Enable DOM storage to support features like local storage
-        webSettings.domStorageEnabled = true
-        // Use cache if available, otherwise load from network
-        webSettings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
         // Load the page in a mode that fits the content width
         webSettings.loadWithOverviewMode = true
         // Set the viewport to fit the page in the WebView
         webSettings.useWideViewPort = true
-
-        // Enable zoom controls for a better user experience
-        webSettings.builtInZoomControls = true
+        // Disable caching to ensure fast fresh loading
+        webSettings.cacheMode = WebSettings.LOAD_NO_CACHE
+        // Disable zoom controls for a cleaner UI
+        webSettings.builtInZoomControls = false
         webSettings.displayZoomControls = false
 
         // Use hardware acceleration for improved performance
@@ -71,53 +65,24 @@ class ChatGPT : AppCompatActivity() {
             ): Boolean {
                 return false // Allow the WebView to load the URL internally
             }
-
-            override fun onPageFinished(view: WebView, url: String) {
-                super.onPageFinished(view, url)
-                // Additional actions after page load, if needed
-            }
-        }
-
-        // Use WebChromeClient for JavaScript dialogs and other UI features
-        webView.webChromeClient = WebChromeClient()
-    }
-
-    // JavaScript interface class for interacting with the WebView
-    inner class QuizInterface {
-
-        @JavascriptInterface
-        fun getAnswerFromChatGPT(question: String) {
-            fetchChatGPTResponse(question)
         }
     }
 
-    // Function to fetch ChatGPT response using your backend server
-    private fun fetchChatGPTResponse(question: String) {
-        val url = "https://your-backend-url/chatgpt-response" // Replace with your backend URL
-        val requestBody = JSONObject()
-        requestBody.put("query", question)
+    private fun handleKeyboardVisibility() {
+        val rootView = findViewById<View>(R.id.main)
 
-        val request = JsonObjectRequest(
-            Request.Method.POST,
-            url,
-            requestBody,
-            { response ->
-                val chatResponse = response.getString("response")
-                runOnUiThread {
-                    displayChatGPTResponse(chatResponse)
-                }
-            },
-            { error ->
-                Toast.makeText(this, "Error fetching response: ${error.message}", Toast.LENGTH_SHORT).show()
+        rootView.viewTreeObserver.addOnGlobalLayoutListener {
+            val rect = Rect()
+            rootView.getWindowVisibleDisplayFrame(rect)
+
+            val screenHeight = rootView.height
+            val keypadHeight = screenHeight - rect.bottom
+
+            // If the keypad height is greater than a threshold, it means the keyboard is visible
+            if (keypadHeight > screenHeight * 0.15) {
+                // Scroll the WebView up to avoid hiding content behind the keyboard
+                webView.scrollBy(0, keypadHeight)
             }
-        )
-
-        Volley.newRequestQueue(this).add(request)
-    }
-
-    // Display the ChatGPT response in the WebView using JavaScript
-    private fun displayChatGPTResponse(response: String) {
-        val jsCode = "javascript:document.getElementById('chatgpt-answer').innerHTML = '$response';"
-        webView.evaluateJavascript(jsCode, null)
+        }
     }
 }

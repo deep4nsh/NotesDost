@@ -26,16 +26,23 @@ class About : AppCompatActivity() {
 
         // Find the LinkedIn image by its ID
         val linkedinImage: ImageView = findViewById(R.id.linkedInImg)
-        val linkedinText: TextView =findViewById(R.id.linkedInText)
+        val linkedinText: TextView = findViewById(R.id.linkedInText)
+
+        // Set OnClickListener for LinkedIn Image
         linkedinImage.setOnClickListener {
-            val linkedinUrl = "https://www.linkedin.com/in/deepanshdev/" // Replace with the desired LinkedIn URL
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl))
-            startActivity(intent)
+            openLinkedInUrl()
         }
+
+        // Set OnClickListener for LinkedIn Text
         linkedinText.setOnClickListener {
-            val linkedinUrl = "https://www.linkedin.com/in/deepanshdev/" // Replace with the desired LinkedIn URL
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl))
-            startActivity(intent)
+            openLinkedInUrl()
         }
+    }
+
+    // Function to open LinkedIn URL
+    private fun openLinkedInUrl() {
+        val linkedinUrl = "https://www.linkedin.com/in/deepanshdev/"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl))
+        startActivity(intent)
     }
 }

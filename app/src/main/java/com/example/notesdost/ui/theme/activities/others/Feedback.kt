@@ -26,7 +26,7 @@ class Feedback : AppCompatActivity() {
     private lateinit var webView: WebView
     private lateinit var webSettings: WebSettings
     private var filePathCallback: ValueCallback<Array<Uri>>? = null
-    private lateinit var progressBar: ProgressBar  // Corrected ProgressBar declaration
+    private lateinit var progressBar: ProgressBar
 
     private val galleryLauncher =
         registerForActivityResult(ActivityResultContracts.GetMultipleContents()) { uris ->
@@ -60,6 +60,8 @@ class Feedback : AppCompatActivity() {
         webView = findViewById(R.id.webViewFeedback)
         webSettings = webView.settings
         webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
+        webSettings.cacheMode = WebSettings.LOAD_DEFAULT  // Use default caching
         webView.webViewClient = WebViewClient()
         webView.webChromeClient = object : WebChromeClient() {
             override fun onShowFileChooser(
@@ -77,26 +79,26 @@ class Feedback : AppCompatActivity() {
         webView.loadUrl("file:///android_asset/feedback_form.html")
     }
 
-    // Call this method when you start the form submission
+    // Show ProgressBar when form submission starts
     private fun showLoader() {
         progressBar.visibility = View.VISIBLE
     }
 
-    // Call this method after the form is submitted
+    // Hide ProgressBar after submission is complete
     private fun hideLoader() {
         progressBar.visibility = View.GONE
     }
 
-    // Example form submission logic
+    // Function to submit the form
     private fun submitForm() {
         showLoader()
 
-        // Assuming the form has a JavaScript function called submitForm
-        webView.evaluateJavascript("submitForm()") { result ->
-            // Handle the result (success or failure)
-            hideLoader()
-            // You might want to show a success message or handle the result further
-            Toast.makeText(this, "Form submitted: $result", Toast.LENGTH_SHORT).show()
+        // Execute the JavaScript submitForm function with minimal delay
+        webView.evaluateJavascript("javascript:submitForm()") { result ->
+            hideLoader() // Hide loader immediately after JavaScript completion
+
+            // Handle the result (optional success message)
+            Toast.makeText(this, "Form submitted successfully!", Toast.LENGTH_SHORT).show()
         }
     }
 
