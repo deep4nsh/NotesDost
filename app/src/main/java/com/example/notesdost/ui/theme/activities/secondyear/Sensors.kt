@@ -121,7 +121,7 @@ class Sensors : AppCompatActivity() {
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Sensor Quantum PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
+        topicsList.add(Topics("Sensor Quantum PDF", "https://drive.google.com/file/d/1Zmoc4Wq7Rh8V32LaiG10bbdJCukHcEV6/view?usp=drivesdk"))
         chapterList.add(Chapter("Sensor Quantum", topicsList))
         sendData()
     }
