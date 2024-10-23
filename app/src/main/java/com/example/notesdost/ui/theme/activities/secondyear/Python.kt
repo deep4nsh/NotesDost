@@ -98,6 +98,9 @@ class Python : AppCompatActivity() {
         topicsList = mutableListOf()
         topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1G4osV4W_o4T_LtwaBbnyoFgyNGtxRRwi/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
+topicsList = mutableListOf()
+        topicsList.add(Topics("Unit 1 Handwritten PDF", "https://drive.google.com/file/d/1ZuEFpZQF7qa9ACV_Fqze8ldBD-DO6ceE/view?usp=drivesdk"))
+        chapterList.add(Chapter("Unit 1", topicsList))
 
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
