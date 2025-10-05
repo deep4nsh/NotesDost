@@ -78,7 +78,7 @@ class COISecond : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("NOtes PDF", "https://drive.google.com/file/d/1JRsaCOUQKIAp8Dmd6UIIvBJtvj0p6XGU/view?usp=drive_link"))
+        topicsList.add(Topics("Notes PDF", "https://drive.google.com/file/d/1JRsaCOUQKIAp8Dmd6UIIvBJtvj0p6XGU/view?usp=drive_link"))
         chapterList.add(Chapter("Notes", topicsList))
 
         topicsList = mutableListOf()
