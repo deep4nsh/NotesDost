@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#081724"
     tools:context=".ui.theme.activities.firstyear.phygrp.PhyGrpGraphicsLab">
 
     <include layout="@layout/action_bar_top"/>

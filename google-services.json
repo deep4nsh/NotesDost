@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "103796018202",
+    "project_id": "notes-dost-4699e",
+    "storage_bucket": "notes-dost-4699e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103796018202:android:de5253992e2a6d5c7215a3",
+        "android_client_info": {
+          "package_name": "com.example.notesdost"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn4cmhZ_dP36SPYPjD8LazqrnkYdMrXeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

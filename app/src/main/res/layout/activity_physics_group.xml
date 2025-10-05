@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7C8993"
+    android:background="#081724"
     tools:context=".ui.theme.activities.firstyear.phygrp.PhysicsGroupActivity">
 
     <View
@@ -19,32 +19,39 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/scrollView2"
+        android:layout_alignBottom="@+id/top_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_margin="37dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="117dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="107dp"
         android:fontFamily="@font/jockey_one"
         android:gravity="center"
         android:text="Physics Group Subjects"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/top_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
         android:fillViewport="true">
+
         <GridLayout
             android:id="@+id/gridLayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
+            android:layout_gravity="center_horizontal"
             android:columnCount="2"
             android:rowCount="8">
 
@@ -63,7 +70,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -102,7 +109,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -142,7 +149,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -182,7 +189,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -222,7 +229,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -262,7 +269,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -303,7 +310,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -339,9 +346,9 @@
                 app:cardCornerRadius="15dp">>
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -379,9 +386,9 @@
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView
@@ -417,9 +424,9 @@
                 app:cardCornerRadius="15dp">
 
                 <LinearLayout
-                    android:layout_width="182dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#CAC4C4"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <ImageView

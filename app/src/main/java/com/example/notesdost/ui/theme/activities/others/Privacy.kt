@@ -24,7 +24,6 @@ class Privacy : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         webView = findViewById(R.id.webView)
         webSettings = webView.settings
         webSettings.javaScriptEnabled = true

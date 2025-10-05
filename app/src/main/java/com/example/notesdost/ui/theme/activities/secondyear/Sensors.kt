@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -74,6 +75,18 @@ class Sensors : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@Sensors, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@Sensors, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
@@ -108,7 +121,7 @@ class Sensors : AppCompatActivity() {
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Sensor Quantum PDF", "https://drive.google.com/file/d/1YaBaUnol1gjUPi4PSyZNj0bSGuT5_2-P/view?usp=sharing"))
+        topicsList.add(Topics("Sensor Quantum PDF", "https://drive.google.com/file/d/1Zmoc4Wq7Rh8V32LaiG10bbdJCukHcEV6/view?usp=drivesdk"))
         chapterList.add(Chapter("Sensor Quantum", topicsList))
         sendData()
     }

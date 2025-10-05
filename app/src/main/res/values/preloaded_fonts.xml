@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/bakbak_one</item>
+        <item>@font/bebas_neue</item>
+        <item>@font/comfortaa_bold</item>
         <item>@font/damion</item>
         <item>@font/jockey_one</item>
+        <item>@font/namdhinggo_bold</item>
+        <item>@font/neuton_extralight</item>
+        <item>@font/roboto_bold</item>
+        <item>@font/work_sans_semibold</item>
     </array>
 </resources>

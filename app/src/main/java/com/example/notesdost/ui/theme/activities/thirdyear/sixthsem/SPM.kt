@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -73,6 +74,18 @@ class SPM : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@SPM, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@SPM, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
@@ -84,28 +97,36 @@ class SPM : AppCompatActivity() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
 
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/13wBUwwQq7vkUQf0yywqspqpOTr4H2LPq/view?usp=sharing"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1WXVenWpRKABiOmr1ZPaEdXht4Q0y_oHf/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PPT", "https://docs.google.com/presentation/d/1cqjm7bKgEY7xzvjSWdGbS6H9r4O4fez0/edit?usp=drive_link&ouid=106337926642029447298&rtpof=true&sd=true"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1JYFj5JcUrbcLN4mG9j4shYeswILF78Cf/view?usp=sharing"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/18gkSTK5I-tcjNGPocoIJS_gaDdZrBdvE/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1bVSfIbsEKZLgCiSdehL98V9VXYo53ZDP/view?usp=sharing"))
+        topicsList.add(Topics("Unit 3 Network Planning PDF", "https://drive.google.com/file/d/1pgnyQYH0JeWQLMHo4rQl7aCSgN3f5_au/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1NJHv_iB4zX6S1kRAzUzen0gvtDPCvRLG/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1fcRUm7hXJHysnWpxh5NDNAjLLzANKNT2/view?usp=sharing"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1-1DxzcwKtn3S9mzuOAv1y0NNFlEvDS85/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PPT", "https://drive.google.com/file/d/11e0DQb19nFfQ0a53aTCMdZEaV64nDIJO/view?usp=sharing"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1dxF_ksa75vZnGs2v-zIx8kX8yA6YniI0/view?usp=sharing"))
+        topicsList.add(Topics("Unit 5 PDF", "https://drive.google.com/file/d/1mKtQIxsR9w3DdSNb6kzoaKAx2nlr2v3L/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 5 Theories Of Motivation PDF", "https://drive.google.com/file/d/1ehdOOaCvUUtbO56tNhIsY1kDMMoAl4re/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Java Quantum PDF", "https://drive.google.com/file/d/1yMMPgsd4ps2VB5okQOsH-PmTTuXymvCW/view?usp=sharing"))
-        chapterList.add(Chapter("Java Quantum", topicsList))
+        topicsList.add(Topics("PDF", "https://drive.google.com/file/d/1nbmyjOkLAP0MdoDQVPabhhjP0KipwRCu/view?usp=drive_link"))
+        chapterList.add(Chapter("SPM Full Notes", topicsList))
+
+        topicsList = mutableListOf()
+        topicsList.add(Topics("SPM Quantum PDF", "https://drive.google.com/file/d/1tymmEYcGkj-01zYpM0FJzPDW2cTBYoU0/view?usp=sharing"))
+        chapterList.add(Chapter("SPM Quantum", topicsList))
 
         sendData()
     }

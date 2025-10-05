@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -66,7 +67,18 @@ class PhyGrpPPS : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-
+                R.id.feedback -> {
+                    // Open About Activity
+                    val intent = Intent(this@PhyGrpPPS, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@PhyGrpPPS, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }

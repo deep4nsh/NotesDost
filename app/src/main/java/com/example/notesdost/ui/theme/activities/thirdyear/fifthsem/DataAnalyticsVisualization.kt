@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -70,6 +71,18 @@ class DataAnalyticsVisualization : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@DataAnalyticsVisualization, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@DataAnalyticsVisualization, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
@@ -78,19 +91,27 @@ class DataAnalyticsVisualization : AppCompatActivity() {
     private fun addData() {
         chapterList = mutableListOf()
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/1KoHBeV57lUO3F5F1z7ZUadjke3CukW5i/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PDF", "https://drive.google.com/file/d/16Sqj7d6d7-7b8uQf-Hjlo8ehLkw_40Y3/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 PPTs", "https://drive.google.com/drive/folders/167kbVRbPzK_P5j5FPcuOkdPsKgG7g1Nl?usp=drive_link"))
+        topicsList.add(Topics("Unit 1 Other", "https://drive.google.com/file/d/1p18DRf9Whr_MfzgBSy_R_ImtK3oftcHe/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 1", topicsList))
 
         topicsList = mutableListOf() // Reset topicsList for new chapter
-        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1BeMgvcrC5Oc-pICnSjFGVZxZD3VGjhqQ/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PDF", "https://drive.google.com/file/d/1FZBHH3vSJxnwGAcqOnxhzHXKlCorwht9/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 PPTs", "https://drive.google.com/drive/folders/1Z5nwp5SVKgIzq4XU4c5lLxx3DRnQmw1a?usp=drive_link"))
+        topicsList.add(Topics("Unit 2 Other", "https://drive.google.com/file/d/1lbzsWLbpUmnBqBDwNhxcSDTX6-ihA0ET/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 2", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/1Xihg0ZwVDo8NMIUQGIeyM1Szm9ZBp9E6/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PDF", "https://drive.google.com/file/d/16Nt_XDrIlhuqGPWajVIZuGubctggKeCg/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 PPTs", "https://drive.google.com/drive/folders/1tInqUMKQYGhLcRrKwRQGH0qd8bKaniyV?usp=drive_link"))
+        topicsList.add(Topics("Unit 3 Other", "https://drive.google.com/file/d/1YKnveRv0fu-dVCCYNOYb4cVrvgKALOlJ/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 3", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1Oi7DwlZt7JLvzxt_1xGXNNK4SI9_6GA9/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PDF", "https://drive.google.com/file/d/1TsSh8xTiTmaDzMZblUWqC7GI07RN4pDr/view?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 PPTs", "https://drive.google.com/drive/folders/1wMhQ4WQZML5jx17VWGbaz49DGOiyXy1M?usp=drive_link"))
+        topicsList.add(Topics("Unit 4 Other", "https://drive.google.com/file/d/1w6P86NAZ4OG7i5HeG54zKRtCbmUtyIQn/view?usp=drive_link"))
         chapterList.add(Chapter("Unit 4", topicsList))
 
         topicsList = mutableListOf()
@@ -98,8 +119,8 @@ class DataAnalyticsVisualization : AppCompatActivity() {
         chapterList.add(Chapter("Unit 5", topicsList))
 
         topicsList = mutableListOf()
-        topicsList.add(Topics("CSS Quantum PDF", "https://drive.google.com/file/d/1JPPc7KP1Yx8TvdseJGOkagxVjZ3b8BgV/view?usp=sharing"))
-        chapterList.add(Chapter("CSS Quantum", topicsList))
+        topicsList.add(Topics("DAV Quantum PDF", "https://drive.google.com/file/d/14nitiFh6jwybU3fDH8KMUJ4qSG1tE2pI/view?usp=drive_link"))
+        chapterList.add(Chapter("DAV Quantum", topicsList))
         sendData()
     }
     private fun sendData(){

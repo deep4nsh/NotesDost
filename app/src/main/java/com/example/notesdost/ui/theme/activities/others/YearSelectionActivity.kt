@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.notesdost.R
@@ -41,18 +42,20 @@ class YearSelectionActivity : AppCompatActivity() {
             startActivity(intent)
         }
         fourthYearCard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, FourthYearMainActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Under development.", Toast.LENGTH_SHORT).show()
         }
         firstYearMCACard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Under development", Toast.LENGTH_SHORT).show()
         }
         secondYearMCACard.setOnClickListener {
-            val intent = Intent(this@YearSelectionActivity, SplashActivity::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Under development", Toast.LENGTH_SHORT).show()
         }
 
+        val backArrow: ImageView = findViewById(R.id.backArrow)
+        backArrow.setOnClickListener {
+            // Go back to the previous activity
+            onBackPressed()
+        }
         val menu: ImageView = findViewById(R.id.menuBar)
         menu.setOnClickListener {
             // Show popup menu when menu button is clicked
@@ -81,6 +84,18 @@ class YearSelectionActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.feedback -> {
+                    // Open Feedback Activity
+                    val intent = Intent(this@YearSelectionActivity, Feedback::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@YearSelectionActivity, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
@@ -102,6 +117,14 @@ class YearSelectionActivity : AppCompatActivity() {
             }
             R.id.about -> {
                 startActivity(Intent(this, About::class.java))
+                true
+            }
+            R.id.feedback -> {
+                startActivity(Intent(this,Feedback::class.java))
+                true
+            }
+            R.id.quiz -> {
+                startActivity(Intent(this,Quiz::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

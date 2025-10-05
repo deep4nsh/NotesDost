@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.activities.thirdyear.sixthsem.COISecond
 
 class SixthSemActivity : AppCompatActivity() {
@@ -22,7 +23,6 @@ class SixthSemActivity : AppCompatActivity() {
         val bigDataCard: CardView = findViewById(R.id.bdCard)
         val cnCard: CardView = findViewById(R.id.cnCard)
         val coi_iiCard: CardView = findViewById(R.id.coi_IICard)
-        val quantumCard: CardView = findViewById(R.id.quantumCard)
         val seCard: CardView = findViewById(R.id.seCard)
         val spmCard: CardView = findViewById(R.id.spmCard)
         val webTechCard: CardView = findViewById(R.id.webTechCard)
@@ -40,10 +40,6 @@ class SixthSemActivity : AppCompatActivity() {
         }
         coi_iiCard.setOnClickListener {
             val intent = Intent(this@SixthSemActivity, COISecond::class.java)
-            startActivity(intent)
-        }
-        quantumCard.setOnClickListener {
-            val intent = Intent(this@SixthSemActivity, Quantum::class.java)
             startActivity(intent)
         }
         seCard.setOnClickListener {
@@ -90,6 +86,18 @@ class SixthSemActivity : AppCompatActivity() {
                     val intent = Intent(this@SixthSemActivity, About::class.java)
                     startActivity(intent)
                     true
+                }
+                R.id.feedback -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@SixthSemActivity, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                // Open Quiz Activity
+                val intent = Intent(this@SixthSemActivity, Quiz::class.java)
+                startActivity(intent)
+                true
                 }
                 else -> false
             }

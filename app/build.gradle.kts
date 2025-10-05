@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -15,6 +16,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -29,19 +31,24 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         compose = true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -50,7 +57,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
@@ -62,6 +68,15 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.appcompat)
+    implementation(libs.volley)
+    implementation(libs.androidx.tools.core)
+    implementation(libs.androidx.games.activity)
+    implementation(libs.android.gif.drawable)
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("com.airbnb.android:lottie:6.5.2")
+    implementation(libs.firebase.analytics)
+    // Firebase dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -69,11 +84,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation (libs.glide)
-    implementation (libs.pdf.viewer.android){
-        exclude ("com.android.support","support-compat")
-    }
-    annotationProcessor (libs.compiler)
-    implementation (libs.android.gif.drawable)
+    implementation (libs.firebase.messaging)
+    implementation (libs.material.v190)
 
 }

@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 
 class SecondYearMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +30,8 @@ class SecondYearMainActivity : AppCompatActivity() {
         val osCard: CardView = findViewById(R.id.osCard)
         val coaCard: CardView = findViewById(R.id.coaCard)
         val uhvCard: CardView = findViewById(R.id.uhvCard)
+        val cssCard: CardView = findViewById(R.id.cssCard)
+        val tcCard: CardView = findViewById(R.id.tcCard)
 
         // Set onClickListeners for each CardView
         automataCard.setOnClickListener {
@@ -75,6 +78,14 @@ class SecondYearMainActivity : AppCompatActivity() {
             val intent = Intent(this@SecondYearMainActivity, COA::class.java)
             startActivity(intent)
         }
+        cssCard.setOnClickListener {
+            val intent = Intent(this@SecondYearMainActivity, CSS::class.java)
+            startActivity(intent)
+        }
+        tcCard.setOnClickListener {
+            val intent = Intent(this@SecondYearMainActivity, TC::class.java)
+            startActivity(intent)
+        }
 
         // Handle back arrow click
         val backArrow: ImageView = findViewById(R.id.backArrow)
@@ -105,6 +116,18 @@ class SecondYearMainActivity : AppCompatActivity() {
                 }
                 R.id.about -> {
                     val intent = Intent(this@SecondYearMainActivity, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.feedback -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@SecondYearMainActivity, Quiz::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@SecondYearMainActivity, Quiz::class.java)
                     startActivity(intent)
                     true
                 }

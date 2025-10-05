@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -23,7 +24,7 @@ class Automata : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_phy_grp_maths1)
+        setContentView(R.layout.activity_second_year_automata)
 
         expandableListView = findViewById(R.id.expandableListView)
         addData()
@@ -67,6 +68,18 @@ class Automata : AppCompatActivity() {
                 R.id.about -> {
                     // Open About Activity
                     val intent = Intent(this@Automata, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.feedback -> {
+                    // Open About Activity
+                    val intent = Intent(this@Automata, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@Automata, Quiz::class.java)
                     startActivity(intent)
                     true
                 }

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesdost.R
 import com.example.notesdost.ui.theme.activities.others.About
 import com.example.notesdost.ui.theme.activities.others.Privacy
+import com.example.notesdost.ui.theme.activities.others.Quiz
 import com.example.notesdost.ui.theme.adapter.CustomAdapter
 import com.example.notesdost.ui.theme.model.Chapter
 import com.example.notesdost.ui.theme.model.Topics
@@ -70,6 +71,21 @@ class ChemGrpChemistryLab : AppCompatActivity() {
                 R.id.about -> {
                     // Open About Activity
                     val intent = Intent(this@ChemGrpChemistryLab, About::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.feedback -> {
+                    // Open Feedback Activity
+                    val intent = Intent(
+                        this@ChemGrpChemistryLab,
+                        com.example.notesdost.ui.theme.activities.others.Feedback::class.java
+                    )
+                    startActivity(intent)
+                    true
+                }
+                R.id.quiz -> {
+                    // Open Quiz Activity
+                    val intent = Intent(this@ChemGrpChemistryLab, Quiz::class.java)
                     startActivity(intent)
                     true
                 }
